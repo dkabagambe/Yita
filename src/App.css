@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #d7e0ef;
+  color: #112898;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-color: #e6f4f7;
+  /* opacity: 0.8; */
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e6f4f7 10px
+    ),
+    repeating-linear-gradient(#eef7f955, #eef7f9);
+  overflow-x: hidden !important;
+  font-size: 15px;
+}
+
+.Rcolor {
+  color: #ec0002;
+}
+
+.tweets {
+  width: 40%;
+  height: 50vh;
+  overflow: auto;
+  margin: auto;
+}
+.fixedwhatsapp {
+  position: fixed;
+  height: 40px;
+
+  bottom: 40px;
+  right: 40px;
+  display: none;
+}
+.fixedwhatsapp img {
+  height: 50px;
+}
+.labelimages {
+  display: flex;
+}
+.labelimages img {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-x: hidden !important;
+  }
+}
+.css-1dbjc4n {
+  background-color: green;
+}
+.viewtbb input {
+}

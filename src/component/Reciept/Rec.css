@@ -1,0 +1,97 @@
+.logoappointment {
+  font-size: 60px;
+  font-weight: 900;
+}
+.logoappointment img {
+  height: 170px;
+}
+.desco {
+  margin: 20px;
+  font-weight: 900;
+  font-size: 35px;
+  border-top: 4px solid lightgrey;
+  border-bottom: 4px solid red;
+  text-align: center;
+}
+.rec {
+  background-color: white;
+}
+.dt {
+  text-align: center;
+  padding: 20px;
+}
+.dt label {
+  padding-right: 30px;
+}
+.desci {
+  display: flex;
+  text-align: center;
+  padding-left: 20%;
+}
+.desci div {
+  width: 20%;
+  height: 30px;
+  border-bottom: 1px dotted grey;
+}
+.rcp {
+  /* background-color: green; */
+}
+
+.rcp ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+   width: 40%;
+  margin: auto;
+  /* width: 80%; */
+}
+.rcp ul li {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  margin: auto;
+ 
+}
+.rcp img {
+  width: 70%;
+  border-radius: 15px;
+  margin: 20px;
+}
+.tr {
+  border: 1px solid grey;
+}
+table {
+  width: 80%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .desci {
+    display: flex;
+    text-align: center;
+    padding-left: 2%;
+  }
+  .desco {
+    margin: 20px;
+    font-weight: 900;
+    font-size: 15px;
+    border-top: 4px solid lightgrey;
+    border-bottom: 4px solid red;
+    text-align: center;
+  }
+  .logo img {
+    height: 90px;
+  }
+  .desci label {
+    width: 340px;
+  }
+}

@@ -1,0 +1,73 @@
+.about {
+  /* height: 60vh; */
+  /* background-color: white; */
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(215, 224, 239, 1) 100%
+  );
+  padding-top: 7%;
+}
+.subabout span {
+  /* color: black; */
+  font-weight: bold;
+  font-size: 30px;
+}
+.subabout {
+  margin-bottom: 15px;
+}
+.about button {
+  background-color: rgb(23, 154, 235);
+  color: white;
+  /* height: 30px; */
+  padding: 10px;
+  width: 60%;
+  border: none;
+  margin-top: 7%;
+}
+.about col {
+  padding-bottom: 200px;
+}
+.aboutTime ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.aboutTime ul li {
+  flex: 1;
+  padding-top: 10px;
+  border-bottom: 1px solid #112898;
+}
+.aboutTime ul li:nth-child(2) {
+  text-align: right;
+}
+.aboutTime {
+  border: 6px solid #d7e0ef;
+  padding: 30px;
+}
+.aboutTime h5 {
+  font-weight: bold;
+}
+.abouthelp {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.abouthelp label {
+  font-weight: bold;
+}
+.aboutTime button {
+  background-color: #e42326;
+  color: white;
+  /* height: 30px; */
+  padding: 10px;
+  width: 40%;
+  border: none;
+  margin-top: 7%;
+}
+.cIcons ion-icon {
+  font-size: 18px;
+  margin-right: 15px;
+  margin-top: 15px;
+}

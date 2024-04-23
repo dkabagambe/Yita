@@ -1,0 +1,123 @@
+.appinttab input {
+  width: 50%;
+  height: 50px;
+}
+.apxt {
+  padding-top: 20vh;
+}
+.appinttab select {
+  width: 50%;
+  height: 50px;
+}
+.appinttab textarea {
+  width: 50%;
+  height: 50px;
+  margin-bottom: 20px;
+  height: 70px;
+}
+.appinttab button {
+  width: auto;
+}
+.appontTabX {
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+}
+.appinttab .form-group {
+  display: flex;
+}
+.appinttab .form-group label {
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 40%;
+  text-align: right;
+}
+.leftb {
+  border-left: 1px solid grey;
+}
+.logbg {
+  position: absolute;
+  width: 40%;
+  right: 30%;
+  z-index: -1;
+  margin-top: 60vh;
+  opacity: 0.04;
+}
+.form-group {
+  color: #112898;
+}
+.uptext .form-group {
+  display: block;
+}
+.uptext input {
+  width: 70%;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.uptd {
+  color: red;
+  font-weight: bold;
+}
+.uptext label {
+  width: 70%;
+}
+.pay {
+  background-color: white;
+  padding: 10px;
+  width: 70%;
+}
+.pay ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* width: 80%; */
+}
+.pay ul li {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  margin: auto;
+}
+.pay img {
+  width: 70%;
+  border-radius: 15px;
+  margin: 20px;
+}
+.checkBox {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  width: 40px;
+}
+@media screen and (max-width: 768px) {
+  .apxt {
+    margin-top: 20vh;
+  }
+  .uptext {
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .uptext input {
+    width: 80%;
+    height: 50px;
+  }
+  .pay img {
+    width: 85%;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  .pay {
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .heading {
+    display: none;
+  }
+}

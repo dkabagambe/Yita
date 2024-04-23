@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&display=swap");
+
+.subTab1 {
+  background-color: white;
+  padding: 30px;
+  background-color: #e6f4f7;
+  opacity: 0.8;
+  background-image: linear-gradient(135deg, #eef7f9 25%, transparent 25%),
+    linear-gradient(225deg, #eef7f9 25%, transparent 25%),
+    linear-gradient(45deg, #eef7f9 25%, transparent 25%),
+    linear-gradient(315deg, #eef7f9 25%, #e6f4f7 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  /* background-color: green; */
+}
+
+.newsletter {
+  display: flex;
+  background-color: #be9fe1;
+  font-family: "Figtree", sans-serif;
+  width: 70%;
+  padding: 4rem;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  
+}
+
+.newsText {
+  color: white;
+  text-align: right;
+  width: 45%;
+  margin: auto;
+}
+
+.newsText h1 {
+  font-weight: 600;
+}
+
+.newsText img {
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.newsSign {
+  background-color: #f1f1f6;
+  width: 70%;
+  margin: auto;
+  padding: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #aa81d8;
+  font-size: 1rem;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input {
+  background-color: #f1f1f6;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  border: none;
+  border-bottom: 2px solid #be9fe1;
+  font-size: 0.9rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+input:focus {
+  outline: none;
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid #aa81d8;
+}
+
+button {
+  background: linear-gradient(to left, #c9b6e4, #e1ccec);
+  color: #f9f9f9;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 50%;
+  padding: 0.4rem;
+  margin: auto;
+  /* margin-top: 1rem; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .newsText {
+    color: white;
+    text-align: center;
+    width: 85%;
+    margin: auto;
+  }
+  .newsletter {
+    display: flex;
+    background-color: #be9fe1;
+    font-family: "Figtree", sans-serif;
+    width: 95%;
+    padding: 4rem;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .newsSign {
+    background-color: #f1f1f6;
+    width: 100%;
+    margin: auto;
+    padding: 4rem;
+  }
+}

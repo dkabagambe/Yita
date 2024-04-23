@@ -1,0 +1,153 @@
+.main {
+  /* margin-top: 50px; */
+  /* height: 80vh; */
+  /* background-color: green; */
+  position: relative;
+  background-image: url("../../../images/10.jpg");
+  /* background-image: url("https://static.vecteezy.com/system/resources/previews/002/783/370/large_2x/blur-hospital-background-free-photo.jpg"); */   
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 40vh;
+  z-index: 11;
+}
+.topBig {
+  /* margin-bottom: 10vh; */
+  text-align: center;
+}
+.topBig label {
+  background-color: #e42326;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+.topBig h1 {
+  font-size: 50px;
+  /* margin-bottom: 10vh; */
+  font-weight: bold;
+  border: 8px solid #112898;
+  border-radius: 40px;
+  padding: 10px;
+  margin-bottom: 10vh;
+}
+.basicdesc {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.topBig h1 span {
+  font-size: 50px;
+  font-weight: bold;
+  color: #e42326;
+}
+.main img {
+  position: absolute;
+  top: 0vh;
+  right: 10%;
+  height: 100%;
+  z-index: -1;
+  /* margin-left: 60%; */
+  margin-bottom: 0;
+}
+.mindDiv {
+  /* margin-top: 15vh; */
+  /* height: 50vh; */
+  width: 60%;
+  /* background-color: aqua; */
+  margin-left: 10%;
+  padding-bottom: 20vh;
+}
+
+.mindDiv h4 {
+  /* text-transform: capitalize; */
+  font-weight: 700;
+}
+
+.mindDiv h3 {
+  /* text-transform: capitalize; */
+  font-weight: 900;
+  font-size: 2.8rem;
+  padding-left: 10px;
+  background: -webkit-linear-gradient(#e42326, #112898);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mindDiv button {
+  height: 50px;
+  width: 40%;
+  margin-top: 20px;
+  background-color: #e42326;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  z-index: 1000;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    /* margin-top: 50px; */
+    height: auto;
+
+    position: relative;
+    background-image: url("../../../images/bg.jpeg");
+
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    
+    text-align: center;
+    margin-top: 130px;
+    /* height: 90vh; */
+  }
+  .topBig h1 {
+    font-size: 20px;
+    /* margin-bottom: 10vh; */
+    font-weight: bold;
+    border: 8px solid #112898;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 10vh;
+  }
+  .topBig h1 span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e42326;
+  }
+
+  .mindDiv {
+    /* margin-top: 15vh; */
+    height: auto;
+    width: 90%;
+    /* background-color: aqua; */
+
+    /* background-color: #112898; */
+    /* margin-left: 5%; */
+    margin: auto;
+  }
+
+  .mindDiv h3 {
+    font-size: 25px;
+  }
+  .mindDiv button {
+    height: 50px;
+    width: auto;
+    margin-top: 20px;
+    background-color: #e42326;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+  }
+  .topBig img {
+    position: absolute;
+    left: 0;
+    width: 95%;
+    /* height: 90%; */
+    /* margin-top: 30%; */
+    opacity: 0.3;
+  }
+}

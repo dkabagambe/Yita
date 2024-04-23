@@ -1,0 +1,20 @@
+.partner {
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  /* width: 80%; */
+  /* overflow-x: hidden; */
+}
+.partner h4 {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .partner{
+    
+  }
+  .partner img {
+    width: 100%;
+    display: block;
+  }
+}
