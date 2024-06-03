@@ -11,11 +11,11 @@ import Subscribe from "./component/sections/Subscribe/Subscribe";
 import Partner from "./component/sections/Partners/Partner";
 import Serve from "./component/sections/Dataserve/Serve";
 import Services from "./component/sections/Services/Services";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Contact from "./component/Page/Contact/Contact";
 import Service from "./component/Page/Services/Service";
 import About from "./component/Page/AboutUs/About";
-import Demo from "./component/demopage/demo";
+// import Demo from "./component/demopage/demo";
 import Appoint from "./component/Appointment/Appoint";
 import ScrollToTop from "./scroll";
 import Activities from "./component/sections/Activities/Activities";
@@ -37,7 +37,7 @@ function App() {
       {/* <Demo /> */}
       <Router>
         <ScrollToTop>
-          <Switch>
+          <Router>
             <Route path="/Contact">
               <Header />
               <Contact />
@@ -70,7 +70,7 @@ function App() {
               <ImageUpload />
             </Route>
             <Route path="/Admin">
-              {localStorage.getItem("logged") == "true" ? (
+              {localStorage.getItem("logged") === "true" ? (
                 <Dashboard />
               ) : (
                 <Panel />
@@ -91,11 +91,11 @@ function App() {
               <Subscribe />
               <Footer />
             </Route>
-          </Switch>
+          </Router>
 
           <div className="fixedwhatsapp">
             <a href="https://wa.me/+256777114327" target="blank">
-              <img src={wp} />
+              <img src={wp} alt="wp" />
             </a>
           </div>
         </ScrollToTop>

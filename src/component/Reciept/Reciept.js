@@ -38,7 +38,7 @@ export default function Reciept() {
         className="desci"
         align="center"
         style={
-          b.action == "Confirmed" ? { display: "show" } : { display: "none" }
+          b.action === "Confirmed" ? { display: "show" } : { display: "none" }
         }
       >
         Received with thanks sum of
@@ -51,7 +51,7 @@ export default function Reciept() {
         className=" "
         align="center"
         style={
-          b.action == "Confirmed" ? { display: "show" } : { display: "none" }
+          b.action === "Confirmed" ? { display: "show" } : { display: "none" }
         }
       >
         Appointment Time
@@ -92,7 +92,7 @@ export default function Reciept() {
     <div
       className="rcp"
       style={
-        b.action == "Approved" ? { display: "block" } : { display: "none" }
+        b.action === "Approved" ? { display: "block" } : { display: "none" }
       }
     >
       <div className=" " align="center">
@@ -104,12 +104,16 @@ export default function Reciept() {
               src={
                 "http://flashugnews.com/wp-content/uploads/2022/07/Airtel-Money-Rates-in-Uganda-2022.jpeg"
               }
+              alt="imgpay"
             />
             <br />
             <label style={{ fontWeight: "bold" }}>0705920614</label>
           </li>
           <li align="center">
-            <img src="https://www.african-markets.com/images/markets/jse/MTN-logo.jpg" />
+            <img
+              src="https://www.african-markets.com/images/markets/jse/MTN-logo.jpg"
+              alt="imgpay"
+            />
             <br />
             <label style={{ fontWeight: "bold" }}>0777114327</label>
           </li>
@@ -132,9 +136,9 @@ export default function Reciept() {
           />
           <br />
           <br />
-          <button className="btn success" onClick={() => paynow(b.Id, b.cost)}>
+          <Button className="btn success" onClick={() => paynow(b.Id, b.cost)}>
             CONFIRM
-          </button>
+          </Button>
           <br />
           <br />
         </div>
@@ -147,7 +151,7 @@ export default function Reciept() {
       <div className="rec">
         <div className="logoappointment" align="center">
           <Link to="/Appointment">
-            <img src={Logo} />
+            <img src={Logo} alt="logo" />
             YITA MEDICAL SERVICES
           </Link>
         </div>
@@ -189,9 +193,8 @@ export default function Reciept() {
           <p>
             Call:<b>+256777114327/ +256702945632</b>
             <br />
-            Website : https://www.yitalife.com
-            For quick delivery of; drugs, lab sample pick up, doctor visit,
-            nurse/midwife care
+            Website : https://www.yitalife.com For quick delivery of; drugs, lab
+            sample pick up, doctor visit, nurse/midwife care
             <br></br>
             Kindly follow us;
             <br />
