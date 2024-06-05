@@ -8,12 +8,6 @@ export default function Tweets() {
       <h2>Blog</h2>
 
       <div className="tweets">
-        <a
-          class="twitter-timeline"
-          href="https://twitter.com/yitamusawo?ref_src=twsrc%5Etfw"
-        >
-          Tweets by yitamusawo
-        </a>
         <Timeline
           dataSource={{
             sourceType: "profile",
