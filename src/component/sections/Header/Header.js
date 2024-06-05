@@ -36,8 +36,8 @@ export default function Header() {
         <div className="navtab container">
           <input type="checkbox" id="nav-toggle" style={{ display: "none" }} />
           <div class="logo" align="center">
-            <img className="limg" src={logo} />
-            <img className="wimg" src={logo2} />
+            <img className="limg" alt="logo" src={logo} />
+            <img className="wimg" alt="logo1" src={logo2} />
           </div>
 
           <ul class="links">
@@ -48,7 +48,6 @@ export default function Header() {
             </li>
             <li>
               <Link to="/AboutUs" data-aos="fade-right">
-                {" "}
                 About
               </Link>
             </li>
@@ -122,12 +121,13 @@ export default function Header() {
 
             <ul style={{ width: "100%" }}>
               <li align="center">
-                <br/>
+                <br />
                 <img
                   src={
                     "http://flashugnews.com/wp-content/uploads/2022/07/Airtel-Money-Rates-in-Uganda-2022.jpeg"
                   }
                   width="60px"
+                  alt="donate"
                 />
                 <br />
                 <label style={{ fontWeight: "bold" }}>
@@ -138,7 +138,10 @@ export default function Header() {
               </li>
               <li align="center">
                 <br />
-                <img src="https://www.african-markets.com/images/markets/jse/MTN-logo.jpg" />
+                <img
+                  src="https://www.african-markets.com/images/markets/jse/MTN-logo.jpg"
+                  alt="sm"
+                />
                 <br />
                 <label style={{ fontWeight: "bold" }}>
                   MOMOPA : 485644
@@ -151,7 +154,10 @@ export default function Header() {
 
             <hr />
             <div>
-              <img src="http://freedomcity.co.ug/wp-content/uploads/2016/08/centenary-bank.png" />
+              <img
+                src="http://freedomcity.co.ug/wp-content/uploads/2016/08/centenary-bank.png"
+                alt="imgs"
+              />
               <br />
               <label style={{ fontWeight: "bold" }}>
                 CENTENARY BANK

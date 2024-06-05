@@ -14,7 +14,7 @@ export default function Partner() {
           our current partners & invite more new credible partnerships on board
         </p>
 
-        <img src={demoPartner} />
+        <img src={demoPartner} alt="partners" />
       </div>
     </div>
   );

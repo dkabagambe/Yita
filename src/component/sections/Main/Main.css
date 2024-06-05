@@ -3,13 +3,11 @@
   /* height: 80vh; */
   /* background-color: green; */
   position: relative;
-  background-image: url("../../../images/10.jpg");
-  /* background-image: url("https://static.vecteezy.com/system/resources/previews/002/783/370/large_2x/blur-hospital-background-free-photo.jpg"); */   
-  background-repeat: no-repeat;
+  background-image: url("../../../images/hero1.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 40vh;
-  z-index: 11;
+  filter: brightness(1.5);
 }
 .topBig {
   /* margin-bottom: 10vh; */
@@ -18,20 +16,20 @@
 .topBig label {
   background-color: #e42326;
   color: white;
+  width: 70%;
   font-weight: bold;
   padding: 20px;
 }
 .topBig h1 {
   font-size: 50px;
-  /* margin-bottom: 10vh; */
-  font-weight: bold;
-  border: 8px solid #112898;
-  border-radius: 40px;
+  font-weight: 900;
+  border: 1px solid red;
+  border-radius: 50px;
   padding: 10px;
   margin-bottom: 10vh;
 }
 .basicdesc {
-  color: red;
+  color: #e42326;
   font-size: 12px;
   font-weight: bold;
 }
@@ -39,21 +37,23 @@
 .topBig h1 span {
   font-size: 50px;
   font-weight: bold;
-  color: #e42326;
+  color: #112898;
+  font-family: garamond;
+  padding-left: 0;
+  padding-right: 0;
 }
 .main img {
   position: absolute;
   top: 0vh;
   right: 10%;
   height: 100%;
-  z-index: -1;
   /* margin-left: 60%; */
   margin-bottom: 0;
 }
 .mindDiv {
   /* margin-top: 15vh; */
   /* height: 50vh; */
-  width: 60%;
+  width: 100%;
   /* background-color: aqua; */
   margin-left: 10%;
   padding-bottom: 20vh;
@@ -61,17 +61,25 @@
 
 .mindDiv h4 {
   /* text-transform: capitalize; */
+  color: #fff;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .mindDiv h3 {
   /* text-transform: capitalize; */
-  font-weight: 900;
-  font-size: 2.8rem;
+  font-weight: 500;
+  font-size: 2.5rem;
   padding-left: 10px;
-  background: -webkit-linear-gradient(#e42326, #112898);
+  background: -webkit-linear-gradient(#e42326, #e42326);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: garamond;
+}
+.mindDiv p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #112898;
 }
 .mindDiv button {
   height: 50px;
@@ -89,31 +97,26 @@
   .main {
     /* margin-top: 50px; */
     height: auto;
-
     position: relative;
-    background-image: url("../../../images/bg.jpeg");
-
-    background-repeat: no-repeat;
+    background-image: url("../../../images/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 10%;
-    
     text-align: center;
     margin-top: 130px;
     /* height: 90vh; */
   }
   .topBig h1 {
-    font-size: 20px;
-    /* margin-bottom: 10vh; */
+    font-size: 15px;
     font-weight: bold;
-    border: 8px solid #112898;
+    border: 5px solid #112898;
     border-radius: 40px;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10vh;
   }
   .topBig h1 span {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: 900;
     color: #e42326;
   }
 
@@ -148,6 +151,6 @@
     width: 95%;
     /* height: 90%; */
     /* margin-top: 30%; */
-    opacity: 0.3;
+    /* opacity: 0.3; */
   }
 }

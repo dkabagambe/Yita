@@ -13,6 +13,8 @@
 .first {
   padding-top: 10px;
   height: 50px;
+  color: #112898;
+  font-weight: 600;
 }
 .first ion-icon {
   position: absolute;
@@ -20,6 +22,8 @@
   /* margin-right: 15px; */
   /* margin-top: 10px; */
   margin-left: -35px;
+  color: #112898;
+  font-weight: bold;
 }
 .navtabbg {
   background-color: white;
@@ -45,9 +49,7 @@
   width: 40%;
   width: 170px;
   padding-left: 5px;
-
   background-color: none;
-
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -81,8 +83,9 @@
   color: white;
   background-color: #e42326;
   /* text-align: center; */
-  font-weight: bold;
+  font-weight: 500;
   width: 100vw;
+  font-size: 18px;
   left: 0;
   right: 0;
 }
@@ -160,7 +163,7 @@
 }
 .donatebtn {
   position: fixed;
-  /* margin-top:1%; */
+  margin-top: 2.5%;
   margin-left: -3%;
   /* left: 0; */
 }
@@ -200,7 +203,7 @@
     color: white;
     background-color: #e42326;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     width: 100vw;
     left: 0;

@@ -26,7 +26,7 @@ export default function Value() {
               data-aos="fade-left"
               align="center"
             >
-              <img src={Logo02} width="100%" />
+              <img src={Logo02} width="100%" alt="imab" />
             </div>
             <div
               className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12"

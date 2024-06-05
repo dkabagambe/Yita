@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import ab from "../../../images/jeol.png";
+import ab from "../../../images/11.jpg";
 import { Link } from "react-router-dom";
 
 export default function AboutSection() {

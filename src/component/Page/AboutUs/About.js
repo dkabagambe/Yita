@@ -101,13 +101,13 @@ export default function About() {
             <div className="navtb">
               <ul data-aos="fade-left">
                 <li
-                  className={index == 0 ? "active" : ""}
+                  className={index === 0 ? "active" : ""}
                   onClick={() => setIndex(0)}
                 >
                   CORE VALUES
                 </li>
                 <li
-                  className={index == 1 ? "active" : ""}
+                  className={index === 1 ? "active" : ""}
                   onClick={() => setIndex(1)}
                 >
                   VALUE PROPOSITION
@@ -116,7 +116,7 @@ export default function About() {
 
               <div
                 className="listt_b"
-                style={index == 0 ? { display: "block" } : { display: "none" }}
+                style={index === 0 ? { display: "block" } : { display: "none" }}
               >
                 <ul data-aos="fade-left">
                   <li>
@@ -132,7 +132,7 @@ export default function About() {
               </div>
               <div
                 className="listt_b"
-                style={index == 1 ? { display: "block" } : { display: "none" }}
+                style={index === 1 ? { display: "block" } : { display: "none" }}
               >
                 <ul>
                   <li>
