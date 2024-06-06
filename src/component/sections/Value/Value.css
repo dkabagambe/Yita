@@ -12,6 +12,8 @@
   margin: 20px auto;
 }
 .valuetab {
+  height: 100%;
+  width: 100%;
 }
 
 .valuetab ul {
