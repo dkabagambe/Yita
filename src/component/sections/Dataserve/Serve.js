@@ -10,7 +10,7 @@ export default function Serve() {
             Yita Life Scope of services & products
           </h4>
           <br />
-          <p align="center" data-aos="fade-left">
+          <p data-aos="fade-left" className="servs">
             We offer an extensive & wide range of standard quality healthcare
             services for both preventive & curative modern medicine and surgical
             practices using mobile & an outdoor healthcare approach. We use

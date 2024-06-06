@@ -8,12 +8,12 @@ export default function Value() {
       <div className="container">
         <div align="center">
           <h4 align="center" style={{ fontWeight: "bold" }} className="Rcolor">
-            The good news about Yita Life Services & products
+            The good news about Yita Life Services & products.
           </h4>
 
           <br />
 
-          <p align="center" style={{ fontWeight: "bold" }}>
+          <p align="center" style={{ fontWeight: "bold" }} className="para1">
             We sort the queue, travel-hospital congestion,excess waiting
             <br /> time & pressure at an affordable cost.
           </p>
@@ -31,7 +31,7 @@ export default function Value() {
             <div
               className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12"
               data-aos="fade-left"
-              style={{ background: "#d7e0ef" }}
+              style={{ background: "#d7e0ef", fontSize: "19px" }}
             >
               <ul>
                 <li>
