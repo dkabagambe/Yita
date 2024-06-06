@@ -9,7 +9,7 @@ export default function Partner() {
       <div className="container">
         <h4 className="Rcolor">Our Partners</h4>
         <br />
-        <p>
+        <p className="partn">
           Partnerships make our services more equitable & accesible. We thank
           our current partners & invite more new credible partnerships on board
         </p>

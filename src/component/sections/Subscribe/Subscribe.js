@@ -10,9 +10,12 @@ export default function Subscribe() {
             <div className="newsText">
               <h1>Join our newsletter!</h1>
               <p>For exciting health and lifestyle education tips.</p>
-              <img src="https://images2.imgbox.com/22/73/1f6acDGg_o.png" />
+              <img
+                src="https://images2.imgbox.com/22/73/1f6acDGg_o.png"
+                alt="sub-img"
+              />
             </div>
-          </div>{" "}
+          </div>
           <div className="col">
             <div className="newsSign">
               <form>
