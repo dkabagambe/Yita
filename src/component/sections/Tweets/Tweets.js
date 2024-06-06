@@ -15,6 +15,7 @@ export default function Tweets() {
           }}
           options={{
             height: "500px",
+            theme: "dark",
           }}
         />
       </div>
