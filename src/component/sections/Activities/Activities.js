@@ -10,7 +10,7 @@ export default function Activities() {
   async function getAppoitDate() {
     await Api.getImage().then((res) => {
       console.log("res.data ", res.data);
-      if (res.data == "No data") {
+      if (res.data === "No data") {
       } else {
         // this.setState({ imagesList:  });
         setimagesList(res.data);
@@ -25,6 +25,7 @@ export default function Activities() {
           src={`${USER_API_URL}/` + a.Link}
           style={{ width: "100%" }}
           data-aos="zoom-in"
+          alt="activities"
         />
 
         <div className="float">{a.caption}</div>
@@ -43,7 +44,7 @@ export default function Activities() {
         </h4>
       </div>
       <br />
-      <div align="center">
+      <div align="center" style={{ fontWeight: "normal" }} className="Rcolor1">
         Yita Life Community outreach & Social Corporate Responsibility.
       </div>
       <br />
@@ -55,9 +56,9 @@ export default function Activities() {
       </div>
 
       <div className="row">
-        {imagesList.length == 0 ? (
+        {imagesList.length === 0 ? (
           <div align="center">
-            <span>No activites</span>
+            <span style={{ textDecoration: "line-through" }}>No activites</span>
           </div>
         ) : (
           imageDiv

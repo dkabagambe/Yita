@@ -1,4 +1,4 @@
-import { Button } from "bootstrap";
+// import { Button } from "bootstrap";
 import React from "react";
 import "./Footer.css";
 
@@ -15,16 +15,16 @@ export default function Footer() {
                 </h6>
                 <ul className="list-unstyled footer-link mt-4">
                   <li>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="">About us</a>
+                    <a href="/AboutUs">About us</a>
                   </li>
                   <li>
-                    <a href="">Our Services</a>
+                    <a href="/Services">Our Services</a>
                   </li>
                   <li>
-                    <a href="">Contact Us</a>
+                    <a href="/Contact">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -37,9 +37,7 @@ export default function Footer() {
                 </h6>
 
                 <ul className="list-unstyled footer-link mt-4">
-                  <li>
-                 
-                  </li>
+                  <li></li>
                 </ul>
               </div>
             </div>
@@ -51,13 +49,10 @@ export default function Footer() {
                 </h6>
                 <ul className="list-unstyled footer-link mt-4">
                   <li>
-                    <a href="">Make Appointment </a>
+                    <a href="/Appointment">Make Appointment </a>
                   </li>
                   <li>
-                    <a href="">Contact us</a>
-                  </li>
-                  <li>
-                    <a href="">Email Us</a>
+                    <a href="/Contact">Contact us</a>
                   </li>
                 </ul>
               </div>
@@ -81,7 +76,7 @@ export default function Footer() {
 
         <div className="text-center mt-5">
           <p className="footer-alt mb-0 f-14">
-            2023 © Yita, All Rights Reserved
+            {new Date().getFullYear()} © Yita, All Rights Reserved
           </p>
         </div>
       </footer>

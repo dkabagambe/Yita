@@ -19,8 +19,14 @@ body {
 
 .Rcolor {
   color: #ec0002;
+  font-size: 24px;
+  font-weight: 700;
 }
-
+.Rcolor1 {
+  color: #112898;
+  font-size: 22px;
+  font-weight: 500;
+}
 .tweets {
   width: 50%;
   height: 500px;

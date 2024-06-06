@@ -10,7 +10,7 @@ export default function Activities() {
   async function getAppoitDate() {
     await Api.getImage().then((res) => {
       console.log("res.data ", res.data);
-      if (res.data == "No data") {
+      if (res.data === "No data") {
         setimagesList();
       } else {
         // this.setState({ imagesList:  });
@@ -47,11 +47,13 @@ export default function Activities() {
             src="https://yitalife.com/images/1.jpg"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty1"
           />
           <img
             src="https://yitalife.com/images/9.jpg"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty2"
           />
         </div>
 
@@ -60,12 +62,14 @@ export default function Activities() {
             src="https://yitalife.com/images/5.jpg"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty3"
           />
           <img
             src="https://yitalife.com/images/2.jpg"
             // src="https://images.unsplash.com/photo-1533713692156-f70938dc0d54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty"
           />
         </div>
 
@@ -75,6 +79,7 @@ export default function Activities() {
             // src="https://images.unsplash.com/photo-1644483878407-f05ff59c8a38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty5"
           />
         </div>
 
@@ -84,12 +89,14 @@ export default function Activities() {
             // src="https://images.unsplash.com/photo-1670659556763-33c046412a5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1108&q=80"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty6"
           />
           <img
             src="https://yitalife.com/images/11.jpg"
             // src="https://images.unsplash.com/photo-1670614300606-eda33e2146be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
             style={{ width: "100%" }}
             data-aos="zoom-in"
+            alt="actvty7"
           />
         </div>
       </div>
