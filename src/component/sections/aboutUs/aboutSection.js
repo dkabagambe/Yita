@@ -11,10 +11,10 @@ export default function AboutSection() {
           <div className="col">
             <div>
               <label className="subabout" data-aos="fade-left">
-                Welcome To <br />{" "}
+                Welcome To <br />
                 <span className="Rcolor">Yita Life Medical Services</span>
               </label>
-              <label data-aos="fade-left">
+              <label data-aos="fade-left" className="about1">
                 Yita Medical Services (YMS) is a registered enterprise (Reg NO.
                 80020035497111) with an aim of providing equititable access to
                 affordable high quality healthcare services with special
@@ -29,7 +29,7 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="col" align="center" data-aos="fade-left">
-            <img src={ab} height="500px" />
+            <img src={ab} height="500px" alt="abt-img" />
           </div>
           <div className="col ">
             <div className="aboutTime" data-aos="fade-left">
