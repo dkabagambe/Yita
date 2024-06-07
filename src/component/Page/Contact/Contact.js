@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
 
-import cont from "../../../images/11.jpg"
+import cont from "../../../images/11.jpg";
 
 export default function Contact() {
   return (
@@ -30,7 +30,7 @@ export default function Contact() {
 
             <section className="section2 row">
               <div className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12">
-               <img src={cont} width="80%"/>
+                <img src={cont} width="80%" alt="img-contact" />
               </div>
               <div className="col column2 last">
                 <div className="sec2innercont">
@@ -49,7 +49,7 @@ export default function Contact() {
                 </div>
                 <div className="sec2contactform">
                   <h3 className="sec2frmtitle">
-                    Want to Know More?? Drop Us a Mail
+                    Want to Know More? Drop Us a Mail
                   </h3>
                   <form action="">
                     <div className="clearfix">
