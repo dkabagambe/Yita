@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./Appoint.css";
 import logo from "../../images/logo.png";
 import Api from "../../Data/Api";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export default function Appoint() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [id, setId] = useState(0);
   const rand =
     Math.floor(Math.random() * (500000000 - 100000000 + 1)) + 100000000;
@@ -22,13 +22,13 @@ export default function Appoint() {
     phone: "",
     email: "",
     weight: "",
-    height: " ",
+    height: "",
     mass: "",
-    smoke: " ",
+    smoke: "",
     alcohol: "",
     concern: "",
     package: "",
-    otherconcern: " ",
+    otherconcern: "",
     visittime: "",
     visidate: "",
     paymentmode: "",
@@ -47,6 +47,7 @@ export default function Appoint() {
     PaidAmount: "",
     Tx: rand,
   });
+
   const [Service, setService] = useState([
     {
       name: "school student medical examination",
@@ -116,10 +117,7 @@ export default function Appoint() {
       name: "Medicine delivery",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Pharmacy",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+    { name: "Pharmacy", icon: <ion-icon name="pulse-outline"></ion-icon> },
     {
       name: "Medicine Refill",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
@@ -128,28 +126,19 @@ export default function Appoint() {
       name: "Laboratory sample pick",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Peadiatrician",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Gynecologist",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+    { name: "Peadiatrician", icon: <ion-icon name="pulse-outline"></ion-icon> },
+    { name: "Gynecologist", icon: <ion-icon name="pulse-outline"></ion-icon> },
     {
       name: "General Doctor",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Surgeon",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+    { name: "Surgeon", icon: <ion-icon name="pulse-outline"></ion-icon> },
     {
       name: "Equipment Purchase",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
     {
-      name: "  Family planning",
+      name: "Family planning",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
     {
@@ -168,14 +157,8 @@ export default function Appoint() {
       name: "Environmental Healthcare Consultancy",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Medical camp",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Mental Health",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+    { name: "Medical camp", icon: <ion-icon name="pulse-outline"></ion-icon> },
+    { name: "Mental Health", icon: <ion-icon name="pulse-outline"></ion-icon> },
     {
       name: "Psychiatric Healthcare",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
@@ -192,55 +175,49 @@ export default function Appoint() {
       name: "Ultrasound scan",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "X-ray",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "CT scan",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "MRI",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Angiogram",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+    { name: "X-ray", icon: <ion-icon name="pulse-outline"></ion-icon> },
+    { name: "CT scan", icon: <ion-icon name="pulse-outline"></ion-icon> },
+    { name: "MRI", icon: <ion-icon name="pulse-outline"></ion-icon> },
+    { name: "Angiogram", icon: <ion-icon name="pulse-outline"></ion-icon> },
   ]);
-  const Display = Service.map((_b) => (
+
+  const Display = Service.map((_b, index) => (
     <option
+      key={index}
       value={_b.name}
       style={{
         textTransform: "capitalize",
       }}
     >
-      {_b.name}{" "}
+      {_b.name}
     </option>
   ));
+
   const handleFormChange = (event) => {
     const { name, value } = event.target;
     setData({ ...appoints, [name]: value });
     console.log("appoints", appoints);
   };
 
-  async function createAppoint() {
+  async function createAppoint(event) {
+    event.preventDefault();
+
     if (
       appoints.name.length < 2 ||
       appoints.otherconcern.length < 2 ||
       appoints.phone.length < 2 ||
       appoints.email.length < 2
     ) {
-      window.alert("Some feilds are required");
+      window.alert("Some fields are required");
     } else {
       await Api.createAppointments(appoints).then((res) => {
         Swal.fire(
           "Success!",
-          "New appointment was created please check our mail",
+          "New appointment was created please check your mail",
           "success"
         );
       });
+
       let datax = {
         name: appoints.name,
         from: appoints.email,
@@ -249,21 +226,20 @@ export default function Appoint() {
           "Get your Reciept here  Reciept https://yitalife.com/Reciept?" +
           appoints.Tx,
         subject: "New Appointment Created",
-        msg: "We have recieved your appointment request. You will recieve mail when your appointment is confirmed, ",
+        msg: "We have received your appointment request. You will receive a mail when your appointment is confirmed.",
       };
 
       await Api.sendmail(datax).then((res) => {
         console.log(res.data);
-        if (res.data == "success") {
-          window.alert("Mail sent Successfully");
+        if (res.data === "success") {
+          window.alert("Mail sent successfully");
         } else {
-          window.alert("Mail Failed");
+          window.alert("Mail failed");
         }
       });
-      // navigate(`/ }`);
-      history.push(`/`);
+
+      navigate(`/`);
       window.location.reload();
-      // history.push(`/Reciept/?${appoints.Tx}`);
     }
   }
 
@@ -271,7 +247,7 @@ export default function Appoint() {
     <div className="apxt">
       <div className="container">
         <div className="logbg" align="center">
-          <img src={logo} />
+          <img src={logo} alt="Logo" />
         </div>
         <div className="heading" align="center">
           <br />
@@ -280,12 +256,11 @@ export default function Appoint() {
           <span>Appointment form</span>
           <label style={{ marginLeft: "30px" }}></label>
         </div>
-        {/* <div className="backLetter">SERVICES</div> */}
         <br />
         <div align="center" className="uptd">
           <h2>
             Please fill out all information,
-            <br /> so that we may better server you.
+            <br /> so that we may better serve you.
           </h2>
         </div>
         <br />
