@@ -22,11 +22,12 @@ import Activities from "./component/sections/Activities/Activities";
 import { useEffect } from "react";
 import Value from "./component/sections/Value/Value";
 import Tweets from "./component/sections/Tweets/Tweets";
-import wp from "./images/wp.png";
+// import wp from "./images/wp.png";
 import Reciept from "./component/Reciept/Reciept";
 import Panel from "./component/Panel/Panel";
 import Dashboard from "./component/Panel/Dashboard";
 import ImageUpload from "./component/Upload/Upload";
+import WhatsApp from "./component/WhatsApp/WhatsApp";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -92,12 +93,13 @@ function App() {
               <Footer />
             </Route>
           </Router>
-
+          {/* 
           <div className="fixedwhatsapp">
             <a href="https://wa.me/+256777114327" target="blank">
               <img src={wp} alt="wp" />
             </a>
-          </div>
+          </div> */}
+          <WhatsApp />
         </ScrollToTop>
       </Router>
 
