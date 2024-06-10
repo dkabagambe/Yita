@@ -31,7 +31,10 @@ export default function Value() {
             <div
               className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12"
               data-aos="fade-left"
-              style={{ background: "#d7e0ef", fontSize: "19px" }}
+              style={{
+                background: "#d7e0ef",
+                fontSize: "20px",
+              }}
             >
               <ul>
                 <li>

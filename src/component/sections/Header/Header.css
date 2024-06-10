@@ -198,7 +198,7 @@
   }
 
   .slogan {
-    /* position: relative; */
+    position: relative;
     /* z-index: ; */
     color: white;
     background-color: #e42326;

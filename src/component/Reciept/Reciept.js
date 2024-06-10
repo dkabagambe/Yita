@@ -29,7 +29,7 @@ export default function Reciept() {
       </label>
       <label>Serial NO 220123843</label>
       <label>Date :</label>
-      <b> 25 /02 /2023</b>
+      <b> 25 /06 /2024</b>
     </div>
   ));
   const dataDivDate = data.map((b) => (

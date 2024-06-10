@@ -41,7 +41,7 @@ select:focus {
 .section1 h1 {
   font-size: 40px;
   color: #0772ba;
-  font-weight: normal;
+  font-weight: 500;
   font-family: garamond;
 }
 
@@ -91,7 +91,7 @@ select:focus {
 .section2 .sec2contactform textarea {
   width: 100%;
   display: block;
-  color: #666;
+  color: #cab7b7;
   resize: none;
 }
 .section2 .sec2contactform input[type="submit"] {

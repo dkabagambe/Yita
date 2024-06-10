@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="text-center mt-5">
           <p className="footer-alt mb-0 f-14">
-            {new Date().getFullYear()} © Yita, All Rights Reserved
+            {new Date().getFullYear()} &copy; Yita,All Rights Reserved
           </p>
         </div>
       </footer>

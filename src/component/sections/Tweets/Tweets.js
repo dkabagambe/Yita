@@ -1,5 +1,4 @@
 import React from "react";
-// import { Tweet } from "react-tweet";
 import { Timeline } from "react-twitter-widgets";
 
 export default function Tweets() {

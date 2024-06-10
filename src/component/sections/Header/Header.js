@@ -56,6 +56,11 @@ export default function Header() {
                 Services
               </Link>
             </li>
+            <li>
+              <Link to="/Activity" data-aos="fade-right">
+                Activities
+              </Link>
+            </li>
 
             <li>
               <Link to="/Contact" data-aos="fade-right">

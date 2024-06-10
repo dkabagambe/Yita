@@ -6,10 +6,13 @@
   margin-top: 10vh;
 }
 .heading {
+  height: 100%;
+  color: #112898;
 }
 .heading span {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 800;
+  font-size: 1.7rem;
+  text-transform: capitalize;
 }
 .heading label {
   height: 3px;
@@ -27,13 +30,14 @@
   margin-bottom: 80px;
   height: 180px;
   border-radius: 20px;
+  font-family: garamond;
 }
 .services h5 {
-  font-weight: bold;
+  font-weight: 500;
 }
 .services p {
   font-weight: 100;
-  /* font-size: 13px; */
+  font-size: 20px;
   margin-top: 15px;
   height: 250px;
 }
@@ -47,8 +51,6 @@
   background-color: white;
   padding: 15px;
   border-radius: 50%;
- ;
-
 }
 .serviceBtn ion-icon {
   font-size: 40px;

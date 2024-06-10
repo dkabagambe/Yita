@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Appoint.css";
 import logo from "../../images/logo.png";
 import Api from "../../Data/Api";
@@ -290,11 +290,11 @@ export default function Appoint() {
                   <span className="help-block"></span>
                 </div>
                 <div className="form-group">
-                  <label for="last_name">Age</label>
+                  <label for="age">Age</label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
-                    id="last_name"
+                    id="age"
                     placeholder="Age"
                     required
                     autoFocus
@@ -307,9 +307,9 @@ export default function Appoint() {
                   <span className="help-block"></span>
                 </div>
                 <div className="form-group">
-                  <label for="email_address">Sex / Gender</label>
+                  <label for="sex">Sex / Gender</label>
                   <input
-                    type="email"
+                    type="emai"
                     className="form-control"
                     id="email_addr"
                     placeholder="Gender"
@@ -559,7 +559,7 @@ export default function Appoint() {
                     type="text"
                     className="form-control"
                     id="last_name"
-                    placeholder="TYpe your Concern"
+                    placeholder="Type your Concern"
                     required
                     autoFocus
                     autoComplete="on"

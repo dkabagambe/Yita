@@ -33,7 +33,7 @@ export default function About() {
                 doctors and volunteers under TEC-Uganda mobilised relief items
                 for vulnerable communities and as well provided COVID 19
                 healthcare services remotely, a project we dubbed ‘’ Yita Musawo
-                ‘’ where over one thousand (1000) people directly benefited.{" "}
+                ‘’ where over one thousand (1000) people directly benefited.
                 <br /> <br />
                 We have since rebranded and diversified our scope of work to
                 include income generating services and products for the

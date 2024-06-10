@@ -2,6 +2,7 @@
   padding-top: 30px;
   height: auto;
   width: 100vw;
+  height: 100%;
   /* background-color: bisque; */
 }
 .data h5 {
@@ -20,10 +21,9 @@
   box-shadow: -4px 1px 17px 0px rgba(216, 235, 248, 0.75);
   -webkit-box-shadow: -4px 1px 17px 0px rgba(245, 243, 243, 0.75);
   -moz-box-shadow: -4px 1px 17px 0px rgba(245, 243, 243, 0.75);
-  /* background-color: green; */
-  box-shadow: -3px 2px 35px 2px rgba(168,222,224,0.75);
--webkit-box-shadow: -3px 2px 35px 2px rgba(168,222,224,0.75);
--moz-box-shadow: -3px 2px 35px 2px rgba(168,222,224,0.75);
+  box-shadow: -3px 2px 35px 2px rgba(168, 222, 224, 0.75);
+  -webkit-box-shadow: -3px 2px 35px 2px rgba(168, 222, 224, 0.75);
+  -moz-box-shadow: -3px 2px 35px 2px rgba(168, 222, 224, 0.75);
 }
 .fliptext {
   font-weight: 900;
@@ -45,7 +45,6 @@
   .service {
     padding-top: 30px;
     height: auto;
-
   }
   .fliptext {
     position: absolute;

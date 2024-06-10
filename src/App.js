@@ -1,33 +1,27 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 // Component Imports
 import Header from "./component/sections/Header/Header";
-import Main from "./component/sections/Main/Main";
-import AboutSection from "./component/sections/aboutUs/aboutSection";
-import Mid from "./component/sections/Mid/Mid";
 import Footer from "./component/sections/Footer/Footer";
-import Subscribe from "./component/sections/Subscribe/Subscribe";
-import Partner from "./component/sections/Partners/Partner";
-import Serve from "./component/sections/Dataserve/Serve";
-import Services from "./component/sections/Services/Services";
+import ScrollToTop from "./scroll";
+import WhatsApp from "./component/WhatsApp/WhatsApp";
+import Main from "./component/sections/Main/Main";
+
+// Page Imports
 import Contact from "./component/Page/Contact/Contact";
 import Service from "./component/Page/Services/Service";
 import About from "./component/Page/AboutUs/About";
 import Appoint from "./component/Appointment/Appoint";
-import ScrollToTop from "./scroll";
-import Activities from "./component/sections/Activities/Activities";
-import Value from "./component/sections/Value/Value";
-import Tweets from "./component/sections/Tweets/Tweets";
 import Reciept from "./component/Reciept/Reciept";
-import Panel from "./component/Panel/Panel";
-import Dashboard from "./component/Panel/Dashboard";
 import ImageUpload from "./component/Upload/Upload";
-import WhatsApp from "./component/WhatsApp/WhatsApp";
+import Dashboard from "./component/Panel/Dashboard";
+import Panel from "./component/Panel/Panel";
+import Activity from "./component/Activities/Activity";
 
 function App() {
   useEffect(() => {
@@ -37,51 +31,12 @@ function App() {
   return (
     <Router>
       <ScrollToTop>
+        <Header />
         <Routes>
-          <Route
-            path="/Contact"
-            element={
-              <>
-                <Header />
-                <Contact />
-                <Subscribe />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/Services"
-            element={
-              <>
-                <Header />
-                <Service />
-                <Subscribe />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/AboutUS"
-            element={
-              <>
-                <Header />
-                <About />
-                <Subscribe />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/Appointment"
-            element={
-              <>
-                <Header />
-                <Appoint />
-                <Subscribe />
-                <Footer />
-              </>
-            }
-          />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Services" element={<Service />} />
+          <Route path="/AboutUS" element={<About />} />
+          <Route path="/Appointment" element={<Appoint />} />
           <Route path="/Reciept" element={<Reciept />} />
           <Route path="/Up" element={<ImageUpload />} />
           <Route
@@ -94,26 +49,10 @@ function App() {
               )
             }
           />
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Main />
-                <Mid />
-                <AboutSection />
-                <Value />
-                <Services />
-                <Partner />
-                <Serve />
-                <Tweets />
-                <Activities />
-                <Subscribe />
-                <Footer />
-              </>
-            }
-          />
+          <Route path="/" element={<Main />} />
+          <Route path="/Activity" element={<Activity />} />
         </Routes>
+        <Footer />
         <WhatsApp />
       </ScrollToTop>
     </Router>
