@@ -218,6 +218,7 @@
     width: 100vw;
   }
   .navtab .links {
+    width: 100%;
     /* float: none; */
     position: fixed;
     /* z-index: 9; */
@@ -246,6 +247,7 @@
   }
   .navtab :checked ~ .links {
     bottom: 0;
+    width: 100%;
   }
   .navtab .icon-burger {
     display: block;
@@ -286,5 +288,8 @@
     /* background-color: green; */
     /* box-shadow: -3px 2px 43px 0px rgba(111, 167, 202, 10.99); */
     box-shadow: -3px 2px 43px 12px rgba(57, 103, 149, 0.59);
+  }
+  .navtab .links {
+    display: block;
   }
 }

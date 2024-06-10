@@ -67,6 +67,7 @@
 .listt_b ul li {
   text-align: left;
   list-style-type: decimal-leading-zero;
+  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   .p_y {
