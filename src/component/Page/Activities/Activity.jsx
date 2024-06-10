@@ -1,15 +1,15 @@
 import React from "react";
 import "./Activity.css";
-import taxi from "../../images/taxi.jpeg";
-import taxi1 from "../../images/taxi2.jpg";
-import taxi2 from "../../images/taxi3.jpg";
-import taxi3 from "../../images/taxi4.jpg";
-import kawempe from "../../images/photo_5976566633449243966_y.jpg";
-import kawempe1 from "../../images/photo_5976566633449243972_y.jpg";
-import kawempe2 from "../../images/photo_5976566633449243973_y.jpg";
-import kawempe3 from "../../images/photo_5976566633449243974_y.jpg";
-import kawempe4 from "../../images/photo_5976566633449243979_y.jpg";
-import kawempe5 from "../../images/photo_5976566633449243977_y.jpg";
+import taxi from "../../../images/taxi.jpeg";
+import taxi1 from "../../../images/taxi2.jpg";
+import taxi2 from "../../../images/taxi3.jpg";
+import taxi3 from "../../../images/taxi4.jpg";
+import kawempe from "../../../images/photo_5976566633449243966_y.jpg";
+import kawempe1 from "../../../images/photo_5976566633449243972_y.jpg";
+import kawempe2 from "../../../images/photo_5976566633449243973_y.jpg";
+import kawempe3 from "../../../images/photo_5976566633449243974_y.jpg";
+import kawempe4 from "../../../images/photo_5976566633449243979_y.jpg";
+import kawempe5 from "../../../images/photo_5976566633449243977_y.jpg";
 
 function Activity() {
   return (

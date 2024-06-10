@@ -88,8 +88,7 @@ class ImageUpload extends React.Component {
     await Api.DelImg(a).then((res) => {
       // console.log("res.data ", res.data);
       this.getAppoitDate();
-    window.location.reload();
-
+      window.location.reload();
     });
   }
   render() {
@@ -98,10 +97,7 @@ class ImageUpload extends React.Component {
         <div className="container" align="center">
           <div className=" ">
             <h2>Manage Community Images</h2>
-
-            <Link to="/">Home</Link> |
-            <Link to="/Admin"> Admin</Link>
-
+            <Link to="/">Home</Link> |<Link to="/Admin"> Admin</Link>
             <div className="row">
               <div className="col">
                 <label className="text-white">Select File</label>
@@ -136,7 +132,6 @@ class ImageUpload extends React.Component {
                 </button>
               </div>
             </div>
-
             <br />
             <br />
             <br />
@@ -152,6 +147,7 @@ class ImageUpload extends React.Component {
                         <img
                           src={`${USER_API_URL}/` + res.Link}
                           style={{ width: "50px" }}
+                          alt="imags"
                         />
                       </div>
                       <div className="col">

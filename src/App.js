@@ -21,7 +21,7 @@ import Reciept from "./component/Reciept/Reciept";
 import ImageUpload from "./component/Upload/Upload";
 import Dashboard from "./component/Panel/Dashboard";
 import Panel from "./component/Panel/Panel";
-import Activity from "./component/Activities/Activity";
+import Activity from "./component/Page/Activities/Activity";
 
 function App() {
   useEffect(() => {

@@ -1,0 +1,82 @@
+.activity-page {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum width for large screens */
+  margin: 40px auto; /* Center the page horizontally */
+  padding: 20px; /* Internal padding */
+  height: auto; /* Automatic height based on content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 1; /* Ensure it is above other elements with negative z-index */
+  padding-top: 30vh;
+  font-family: garamond;
+  overflow: hidden;
+}
+.activity-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* Container for activity cards */
+.activity-container {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap items to the next line */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Full width */
+}
+
+/* Individual activity card */
+.activity-card {
+  margin: 20px; /* Space around each card */
+  flex-basis: calc(33.333% - 40px); /* Three cards per row with space between */
+  padding: 20px; /* Internal padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Ensure flex items do not shrink below their content size */
+.activity-card {
+  flex: 1 1 calc(33.333% - 40px);
+}
+
+/* Styling for the heading inside the card */
+.activity-card h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Styling for the paragraph inside the card */
+.activity-card p {
+  font-size: 18px; /* Font size */
+  color: #112898; /* Text color */
+}
+
+/* Image gallery layout */
+.image-gallery {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive columns */
+  gap: 10px; /* Space between grid items */
+}
+
+/* Styling for images inside the gallery */
+.image-gallery img {
+  width: 100%; /* Full width */
+  height: auto; /* Height adjusts automatically */
+  object-fit: cover; /* Maintain aspect ratio */
+  display: block; /* Ensure images do not have extra space */
+}
+@media (max-width: 650px) {
+  .activity-page {
+    width: 100%; /* Full width */
+    max-width: auto;
+    margin: 20px auto;
+    height: auto; /* Automatic height based on content */
+    padding-top: 22vh;
+  }
+  .activity-page h1 {
+    font-size: 2rem;
+  }
+}
