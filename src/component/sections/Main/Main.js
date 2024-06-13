@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Main.css";
-// import hero from "../../../images/hero1.jpeg";
 export default function Main() {
   return (
     <div className="main">

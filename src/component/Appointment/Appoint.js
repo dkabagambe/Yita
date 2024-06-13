@@ -309,7 +309,7 @@ export default function Appoint() {
                 <div className="form-group">
                   <label for="sex">Sex / Gender</label>
                   <input
-                    type="emai"
+                    type="text"
                     className="form-control"
                     id="email_addr"
                     placeholder="Gender"
