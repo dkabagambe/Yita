@@ -19,7 +19,7 @@ export default function Activities() {
     });
   }
   return (
-    <div className="activities" style={{ background: "white" }}>
+    <div className="activities">
       <br />
       <br />
       <br />

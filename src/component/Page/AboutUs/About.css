@@ -1,6 +1,7 @@
 .p_y {
   width: 60%;
   margin: auto;
+  background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
 }
 .abt {
   padding-top: 10vh;

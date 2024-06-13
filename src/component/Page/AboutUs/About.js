@@ -49,7 +49,7 @@ export default function About() {
           <br />
           <br />
 
-          <div align="center" style={{ background: "white", padding: "30px" }}>
+          <div align="center" style={{ padding: "30px" }}>
             <h3 data-aos="fade-left">Our Vision</h3>
             <p data-aos="fade-left">
               Communities and institution with high regard and support for good

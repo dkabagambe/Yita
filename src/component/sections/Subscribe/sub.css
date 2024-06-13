@@ -3,9 +3,7 @@
 .subTab1 {
   height: 100%;
   width: 100%;
-  background-color: white;
   padding: 30px;
-  background-color: #e6f4f7;
   opacity: 0.8;
   background-image: linear-gradient(135deg, #eef7f9 25%, transparent 25%),
     linear-gradient(225deg, #eef7f9 25%, transparent 25%),
@@ -56,6 +54,7 @@ form {
   text-align: left;
   color: #aa81d8;
   font-size: 1rem;
+  background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
 }
 
 .input-field {

@@ -5,7 +5,7 @@ import demoPartner from "../../../images/partners/pp.png";
 
 export default function Partner() {
   return (
-    <div className="partner" style={{ background: "white" }}>
+    <div className="partner">
       <div className="container">
         <h4 className="Rcolor">Our Partners</h4>
         <br />

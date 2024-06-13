@@ -1,3 +1,6 @@
+.activities {
+  background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
+}
 .activity-page {
   width: 100%; /* Full width */
   max-width: 1200px; /* Maximum width for large screens */
@@ -9,6 +12,7 @@
   padding-top: 30vh;
   font-family: garamond;
   overflow: hidden;
+  background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
 }
 .activity-page h1 {
   font-size: 3rem;
@@ -22,6 +26,7 @@
   flex-wrap: wrap; /* Wrap items to the next line */
   justify-content: center; /* Center items horizontally */
   width: 100%; /* Full width */
+  background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
 }
 
 /* Individual activity card */
