@@ -23,7 +23,7 @@
 .topBig h1 {
   font-size: 50px;
   font-weight: 700;
-  border: 3px solid red;
+  border: 2px dotted red;
   border-radius: 50px;
   padding: 10px;
   margin-bottom: 10vh;
@@ -108,7 +108,7 @@
   .topBig h1 {
     font-size: 15px;
     font-weight: bold;
-    border: 1px solid #112898;
+    border: 1px groove #112898;
     border-radius: 40px;
     padding: 20px;
     margin-bottom: 10vh;

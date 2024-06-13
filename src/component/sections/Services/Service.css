@@ -5,6 +5,9 @@
   height: 100%;
   /* background-color: bisque; */
 }
+.service p {
+  font-size: 20px;
+}
 .data h5 {
   font-weight: bold;
 }
