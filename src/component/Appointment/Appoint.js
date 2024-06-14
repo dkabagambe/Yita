@@ -4,6 +4,7 @@ import logo from "../../images/logo.png";
 import Api from "../../Data/Api";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 
 export default function Appoint() {
   const navigate = useNavigate();
@@ -180,7 +181,6 @@ export default function Appoint() {
     { name: "MRI", icon: <ion-icon name="pulse-outline"></ion-icon> },
     { name: "Angiogram", icon: <ion-icon name="pulse-outline"></ion-icon> },
   ]);
-
   const Display = Service.map((_b, index) => (
     <option
       key={index}
@@ -229,14 +229,22 @@ export default function Appoint() {
         msg: "We have received your appointment request. You will receive a mail when your appointment is confirmed.",
       };
 
-      await Api.sendmail(datax).then((res) => {
-        console.log(res.data);
-        if (res.data === "success") {
-          window.alert("Mail sent successfully");
-        } else {
-          window.alert("Mail failed");
-        }
-      });
+      // Send email using EmailJS
+      emailjs
+        .send(
+          "service_u3hyuoi", // replace with your EmailJS service ID
+          "template_ebhr6eg", // replace with your EmailJS template ID
+          datax,
+          "JSRSaOcgOlLRsjIRO" // replace with your EmailJS user ID,this is the public key
+        )
+        .then((res) => {
+          console.log(res);
+          if (res.status === 200) {
+            window.alert("Mail sent successfully");
+          } else {
+            window.alert("Mail failed");
+          }
+        });
 
       navigate(`/`);
       window.location.reload();
@@ -266,534 +274,342 @@ export default function Appoint() {
         <br />
 
         <div className="appontTabX">
-          <form className="form-group">
-            <div className="row appinttab">
-              <div className="col  col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 ">
-                <div align="center">
-                  <h3>PART A</h3>
-                </div>
-                <div className="form-group">
-                  <label for="first_name">Name of patient</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="first_name"
-                    placeholder="Name"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="name"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Age</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="age"
-                    placeholder="Age"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="age"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="sex">Sex / Gender</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="email_addr"
-                    placeholder="Gender"
-                    required
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="gender"
-                  />
-                  <span className="help-block"></span>
-                </div>
-
-                <div className="form-group">
-                  <label for="phone_number">Address</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    placeholder="Address"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="address"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="dob">Tribe</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    placeholder="Tribe"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="tribe"
-                  />
-                  {/* <input type="date" className="form-control" id="dob" /> */}
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Occupation / Work</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id=" "
-                    placeholder="Occupation / Work"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="occupation"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Religion</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    placeholder="Religion"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="religion"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Education Level</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    placeholder="Education Level"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="level"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Mobile Contact</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="age"
-                    placeholder="Mobile Contact"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="phone"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="age">Email Address</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    placeholder="Email Address"
-                    min="1"
-                    max="110"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="email"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <br />
-                <br />
+          <form className="form" onSubmit={createAppoint}>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  name="name"
+                  required
+                  value={appoints.name}
+                  onChange={handleFormChange}
+                />
               </div>
-              <div className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 leftb">
-                <div align="center">
-                  <h3>PART B</h3>
-                </div>
-
-                <div className="form-group">
-                  <label for="body_weight">Body Weight</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Body Weight"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="weight"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="body_weight">Body Height</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Body Height"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="height"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="body_weight">Body Mass Index (BMI)</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Body Mass Index (BMI)"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="mass"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="body_weight">Do you smoke ?</label>
-                  <select
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="smoke"
-                  >
-                    <option value="">YES / NO</option>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
-                  </select>
-                  <span className="help-block"></span>
-                </div>
-                <br />
-                <div className="form-group">
-                  <label for="body_weight">Do take Alcohol ?</label>
-                  <select
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="alcohol"
-                  >
-                    <option value="">YES / NO</option>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
-                  </select>
-                  <span className="help-block"></span>
-                </div>
-                <br />
-
-                <hr />
-                <div align="center">
-                  <h3>PART C</h3>
-                </div>
-                <br />
-
-                <div className="form-group">
-                  <label for="body_weight">Packages?</label>
-                  <select
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder=""
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="package"
-                  >
-                    {Display}
-                  </select>
-
-                  <span className="help-block"></span>
-                </div>
-                <br />
-                <br />
-                <div className="form-group">
-                  <label for="body_weight">What is your concern today?</label>
-                  <textarea
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Type your Concern"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="otherconcern"
-                  />
-
-                  <span className="help-block"></span>
-                </div>
-                <br />
-                <div className="form-group">
-                  <label for="body_weight">
-                    Any other concern you would like the doctor to know today?
-                  </label>
-                  <textarea
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Yes / No"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="otherconcern"
-                  />
-                  <span className="help-block"></span>
-                </div>
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Age"
+                  name="age"
+                  required
+                  value={appoints.age}
+                  onChange={handleFormChange}
+                />
               </div>
             </div>
-            <br />
-            <hr />
-            <div className="row" align=" ">
-              <div
-                className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 uptext"
-                style={{
-                  borderRight: "1px solid lightgrey",
-                  paddingLeft: "10%",
-                }}
-              >
-                <div align=" ">
-                  <h3>PART C</h3>
-                </div>
-                <div className="form-group">
-                  <label for="first_name">
-                    Any drugs/medicines you currently taking? If yes, list them
-                    down where possible
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="first_name"
-                    placeholder="Any drugs"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="udrug"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="last_name">
-                    Any medicines/drugs/treatment taken earlier? If yes, list
-                    them where possible
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Any Medicine"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="anymedi"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="email_address">
-                    Any known drug/medicine allergies? If yes, list them
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email_addr"
-                    placeholder="Unknown Drug"
-                    required
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="unknowndrug"
-                  />
-                  <span className="help-block"></span>
-                </div>
-
-                <div className="form-group">
-                  <label for="phone_number">
-                    Any past surgery/blood transfusion/major accident? If yes,
-                    list them
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="phone_number"
-                    placeholder="Any Survery or Other"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="anypastsurvery"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="phone_number">
-                    Any known family or inherited diseases? Like diabetes, high
-                    blood pressure, sickle cell etc
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="phone_number"
-                    placeholder="Family Disease"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="unknownfamily"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="phone_number">
-                    Any known chronic disease? Like HIV/AIDS and if yes, list
-                    them
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="phone_number"
-                    placeholder="Any known chronic disease"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="unknownchronic"
-                  />
-                  <span className="help-block"></span>
-                </div>
+            <div className="row">
+              <div className="col-md-6">
+                <select
+                  name="gender"
+                  required
+                  value={appoints.gender}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
               </div>
-              <div
-                className="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 uptext"
-                style={{
-                  paddingLeft: "10%",
-                }}
-              >
-                <div align=" ">
-                  <h3>PART D</h3>
-                </div>
-                <div className="form-group">
-                  <label for="first_name">Doctor Visit time of choice</label>
-                  <input
-                    type="datetime-local"
-                    className="form-control"
-                    id="first_name"
-                    placeholder="Visit time"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="visittime"
-                  />
-                  <span className="help-block"></span>
-                </div>
-                <div className="form-group">
-                  <label for="last_name">Doctor Visit Date of choice</label>
-                  <input
-                    type="datetime-local"
-                    className="form-control"
-                    id="last_name"
-                    placeholder="Visit Date"
-                    required
-                    autoFocus
-                    autoComplete="on"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="visidate"
-                  />
-                  <span className="help-block"></span>
-                </div>
-
-                <div className="form-group">
-                  <label for="phone_number">Feedback</label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="phone_number"
-                    placeholder="Feedback"
-                    onChange={(event) => {
-                      handleFormChange(event);
-                    }}
-                    name="feedback"
-                  />
-                  <span className="help-block"></span>
-                </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Address"
+                  name="address"
+                  required
+                  value={appoints.address}
+                  onChange={handleFormChange}
+                />
               </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div align="center">
-              <input type="checkbox" className="checkBox" />
-              <label>
-                I agree the information is correct and am ready to book now
-              </label>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Tribe"
+                  name="tribe"
+                  required
+                  value={appoints.tribe}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Occupation"
+                  name="occupation"
+                  required
+                  value={appoints.occupation}
+                  onChange={handleFormChange}
+                />
+              </div>
             </div>
-            <br /> <br />
-            <button
-              className="btn btn-lg btn-primary btn-block"
-              type="submit"
-              onClick={() => createAppoint()}
-            >
-              BOOK NOW
-            </button>
+            <div className="row">
+              <div className="col-md-6">
+                <select
+                  name="religion"
+                  required
+                  value={appoints.religion}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Select Religion</option>
+                  <option value="christianity">Christianity</option>
+                  <option value="islam">Islam</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div className="col-md-6">
+                <select
+                  name="level"
+                  required
+                  value={appoints.level}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Select Level</option>
+                  <option value="primary">Primary</option>
+                  <option value="secondary">Secondary</option>
+                  <option value="tertiary">Tertiary</option>
+                </select>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="tel"
+                  placeholder="Phone"
+                  name="phone"
+                  required
+                  value={appoints.phone}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                  value={appoints.email}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Weight"
+                  name="weight"
+                  required
+                  value={appoints.weight}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Height"
+                  name="height"
+                  required
+                  value={appoints.height}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Mass"
+                  name="mass"
+                  required
+                  value={appoints.mass}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <select
+                  name="smoke"
+                  required
+                  value={appoints.smoke}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Do you smoke?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <select
+                  name="alcohol"
+                  required
+                  value={appoints.alcohol}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Do you take alcohol?</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Other Concerns"
+                  name="otherconcern"
+                  required
+                  value={appoints.otherconcern}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="date"
+                  placeholder="Visit Time"
+                  name="visittime"
+                  required
+                  value={appoints.visittime}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="date"
+                  placeholder="Visit Date"
+                  name="visidate"
+                  required
+                  value={appoints.visidate}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <select
+                  name="paymentmode"
+                  required
+                  value={appoints.paymentmode}
+                  onChange={handleFormChange}
+                >
+                  <option value="">Select Payment Mode</option>
+                  <option value="cash">Cash</option>
+                  <option value="card">Card</option>
+                </select>
+              </div>
+              <div className="col-md-6">
+                <select
+                  name="ref"
+                  required
+                  value={appoints.ref}
+                  onChange={handleFormChange}
+                >
+                  <option value="">How did you hear about us?</option>
+                  <option value="google">Google</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="twitter">Twitter</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="friend">Friend</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Feedback"
+                  name="feedback"
+                  required
+                  value={appoints.feedback}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Unknown Drug"
+                  name="unknowndrug"
+                  required
+                  value={appoints.unknowndrug}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Any Medication"
+                  name="anymedi"
+                  required
+                  value={appoints.anymedi}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Any Past Surgery"
+                  name="anypastsurvery"
+                  required
+                  value={appoints.anypastsurvery}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Unknown Family History"
+                  name="unknownfamily"
+                  required
+                  value={appoints.unknownfamily}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Unknown Chronic Disease"
+                  name="unknownchronic"
+                  required
+                  value={appoints.unknownchronic}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Cost"
+                  name="cost"
+                  required
+                  value={appoints.cost}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Quantity"
+                  name="qty"
+                  required
+                  value={appoints.qty}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <button type="submit" className="btn btn-primary">
+                  Submit
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

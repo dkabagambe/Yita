@@ -199,7 +199,7 @@
 
   .slogan {
     position: relative;
-    /* z-index: ; */
+    /* z-index:1 ; */
     color: white;
     background-color: #e42326;
     text-align: center;
