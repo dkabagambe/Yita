@@ -73,7 +73,7 @@
   object-fit: cover; /* Maintain aspect ratio */
   display: block; /* Ensure images do not have extra space */
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .activity-page {
     width: 100%; /* Full width */
     max-width: auto;
