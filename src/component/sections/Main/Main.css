@@ -78,21 +78,26 @@
   color: #fff;
   line-height: 1;
 }
+
+.btns {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  height: 100%;
+}
 .mindDiv button {
   height: 50px;
-  width: 40%;
-  margin-top: 20px;
+  width: 100%;
   background-color: #fd0105;
-  border: none;
-  font-size: large;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: lowercase;
   color: white;
-  padding: 10px;
-  z-index: 1000;
+  margin: 20px 15px;
+  border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
   .main {
-    /* margin-top: 50px; */
     height: auto;
     position: relative;
     background-image: url("../../../images/c86382ee-095c-4459-a64b-c5d2c4d640b1.jpeg");
@@ -103,10 +108,9 @@
     text-align: center;
     margin-top: 130px;
     filter: brightness(1);
-    /* height: 90vh; */
   }
   .topBig h1 {
-    font-size: 15px;
+    font-size: 1.5rem; /* Changed to rem for better scaling */
     font-weight: bold;
     border: 1px groove #112898;
     border-radius: 40px;
@@ -126,12 +130,12 @@
   }
 
   .mindDiv h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1;
   }
   .mindDiv button {
     height: 50px;
-    width: auto;
+    width: 100%;
     margin-top: 20px;
     background-color: #e42326;
     border: none;
@@ -144,8 +148,5 @@
     position: absolute;
     left: 0;
     width: 95%;
-    /* height: 90%; */
-    /* margin-top: 30%; */
-    /* opacity: 0.3; */
   }
 }

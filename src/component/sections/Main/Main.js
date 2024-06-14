@@ -23,14 +23,16 @@ export default function Main() {
           <p data-aos="fade-right" className="basicdesc">
             Yita Life uses part of it’s income to support humanitarian causes.
           </p>
-          <Link to="/Appointment">
-            <button>MAKE AN APPOINTMENT</button>
-          </Link>
-          <Link to="/Contact">
-            <button style={{ background: "#ec0002", marginLeft: "10px" }}>
-              CONTACT US
-            </button>
-          </Link>
+          <div className="btns">
+            <Link to="/Appointment">
+              <button>MAKE AN APPOINTMENT</button>
+            </Link>
+            <Link to="/Contact">
+              <button style={{ background: "#ec0002", marginLeft: "10px" }}>
+                CONTACT US
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
