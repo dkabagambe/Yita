@@ -35,10 +35,12 @@ export default function Header() {
       <div className="navtabbg">
         <div className="navtab container">
           <input type="checkbox" id="nav-toggle" style={{ display: "none" }} />
-          <div class="logo" align="center">
-            <img className="limg" alt="logo" src={logo} />
-            <img className="wimg" alt="logo1" src={logo2} />
-          </div>
+          <a href="/">
+            <div className="logo" align="center">
+              <img className="limg" alt="logo" src={logo} />
+              <img className="wimg" alt="logo1" src={logo2} />
+            </div>
+          </a>
 
           <ul class="links">
             <li>
