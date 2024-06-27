@@ -605,7 +605,11 @@ export default function Appoint() {
             </div>
             <div className="row">
               <div className="col-md-12 text-center">
-                <button type="submit" className="btn btn-primary">
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ marginTop: "40px", marginBottom: "10px" }}
+                >
                   Submit
                 </button>
               </div>

@@ -11,6 +11,19 @@
   width: 50%;
   height: 50px;
 }
+
+select {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+  border: 1px solid #4b5483;
+  font-size: 0.9rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 5px;
+  height: 50px;
+}
 .appinttab textarea {
   width: 50%;
   height: 50px;
@@ -110,8 +123,8 @@
   }
 
   .uptext input {
-    width: 80%;
-    height: 50px;
+    width: 100%;
+    height: 80px;
   }
   .pay img {
     width: 85%;

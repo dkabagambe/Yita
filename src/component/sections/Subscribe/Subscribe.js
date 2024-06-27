@@ -33,7 +33,11 @@ export default function Subscribe() {
                   <br />
                   <input type="number" name="Mobile Number" />
                 </div>
-                <button type="submit" name="submit">
+                <button
+                  type="submit"
+                  name="submit"
+                  style={{ marginTop: "20px", marginBottom: "10px" }}
+                >
                   sign
                 </button>
               </form>

@@ -4,6 +4,7 @@ import "./Gallery.css";
 const images = [
   require("../../../images/7294348d-f284-40bf-8e62-295d3c85d0de.jpeg"),
   require("../../../images/d7b94117-07ca-4993-a02d-8d84322a3876.jpeg"),
+  require("../../../images/yitag.jpg"),
   require("../../../images/photo_5976566633449243966_y.jpg"),
   require("../../../images/photo_5976566633449243979_y.jpg"),
   require("../../../images/photo_5976566633449243975_y.jpg"),
@@ -17,6 +18,8 @@ const images = [
   require("../../../images/photo_5976566633449243969_y.jpg"),
   require("../../../images/photo_5976566633449243989_y.jpg"),
   require("../../../images/photo_5976566633449243971_y.jpg"),
+  require("../../../images/yitaj.jpg"),
+  require("../../../images/yitz1.jpg"),
   // Add more image paths here
 ];
 
