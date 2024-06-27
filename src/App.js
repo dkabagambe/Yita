@@ -29,6 +29,7 @@ import Dashboard from "./component/Panel/Dashboard";
 import ImageUpload from "./component/Upload/Upload";
 import WhatsApp from "./component/WhatsApp/WhatsApp";
 import Activity from "./component/Page/Activities/Activity";
+import Gallery from "./component/Page/Gallery/Gallery";
 
 function App() {
   useEffect(() => {
@@ -114,6 +115,17 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/Gallery"
+            element={
+              <>
+                <Header />
+                <Gallery />
+                <Footer />
+              </>
+            }
+          />
+
           <Route
             path="/Activity"
             element={

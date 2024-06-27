@@ -63,6 +63,11 @@ export default function Header() {
                 Activities
               </Link>
             </li>
+            <li>
+              <Link to="/Gallery" data-aos="fade-right">
+                Gallery
+              </Link>
+            </li>
 
             <li>
               <Link to="/Contact" data-aos="fade-right">

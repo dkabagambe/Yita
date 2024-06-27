@@ -174,7 +174,7 @@ export default function Service() {
               textTransform: "capitalize",
             }}
           >
-            {_b.name}{" "}
+            {_b.name}
           </h5>
         </div>
       </div>
