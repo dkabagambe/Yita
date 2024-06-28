@@ -419,7 +419,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="number"
-                  placeholder="Mass"
+                  placeholder="Body mass index"
                   name="mass"
                   required
                   value={appoints.mass}
@@ -455,7 +455,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="Other Concerns"
+                  placeholder="what is your main complaint(s)today"
                   name="otherconcern"
                   required
                   value={appoints.otherconcern}
@@ -541,7 +541,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="Any Medication"
+                  placeholder="Any Chronic Medication your currently taking" //it should type it here
                   name="anymedi"
                   required
                   value={appoints.anymedi}
@@ -551,7 +551,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="Any Past Surgery"
+                  placeholder="Any Past Surgery"//this one should be removed and merged with any known chronic disease
                   name="anypastsurvery"
                   required
                   value={appoints.anypastsurvery}
@@ -563,7 +563,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="Unknown Family History"
+                  placeholder="Any known disease Family History"
                   name="unknownfamily"
                   required
                   value={appoints.unknownfamily}
@@ -573,7 +573,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="Unknown Chronic Disease"
+                  placeholder="Any Chronic Disease/allergy" // this is should be when yes type
                   name="unknownchronic"
                   required
                   value={appoints.unknownchronic}
@@ -589,7 +589,7 @@ export default function Appoint() {
                   name="cost"
                   required
                   value={appoints.cost}
-                  onChange={handleFormChange}
+                  onChange={handleFormChange} // cost should be off
                 />
               </div>
               <div className="col-md-6">
@@ -599,7 +599,7 @@ export default function Appoint() {
                   name="qty"
                   required
                   value={appoints.qty}
-                  onChange={handleFormChange}
+                  onChange={handleFormChange} //add a provisional where you write to the patient,just download after payment
                 />
               </div>
             </div>

@@ -3,7 +3,7 @@
   /* height: 80vh; */
   /* background-color: green; */
   position: relative;
-  background-image: url("../../../images/yitaj.jpg");
+  background-image: url("../../../images/hero1.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 40vh;
@@ -100,7 +100,7 @@
   .main {
     height: auto;
     position: relative;
-    background-image: url("../../../images/yitaj.jpg");
+    background-image: url("../../../images/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;

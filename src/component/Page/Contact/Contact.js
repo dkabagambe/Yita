@@ -24,7 +24,7 @@ export default function Contact() {
               <div className="textcenter">
                 <span className="shtext">Contact Us</span>
                 <span className="seperator"></span>
-                <h1>Drop Us a Mail</h1>
+                <h1>Contact Us</h1>
               </div>
             </section>
 
@@ -49,7 +49,7 @@ export default function Contact() {
                 </div>
                 <div className="sec2contactform">
                   <h3 className="sec2frmtitle">
-                    Want to Know More? Drop Us a Mail
+                    Want to Know More? Send Us an Mail
                   </h3>
                   <form action="">
                     <div className="clearfix">

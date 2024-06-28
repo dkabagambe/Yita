@@ -21,10 +21,11 @@ function Activity() {
           <p>
             The MoU and working relationship with taxi drivers (UTOF) is taking
             shape and our doctors, nurses, lab team among other staff did a
-            launch with partners like Harvey Institute of health Nkozi, and over
-            80 taxi drivers received free healthcare screening, consultation,
-            health education, treatment , etc We are dedicatee to revolutionise
-            doctor led healthcare services to remote & mass communities.
+            launch with partners like Kommute, Harvey Institute of health Nkozi,
+            and over 150 taxi drivers received free healthcare
+            screening,consultation, health education, treatment , etc We are
+            dedicated to revolutionise doctor led healthcare services to
+            individuals, remote areas & mass communities.
           </p>
           <div className="image-gallery">
             <img src={taxi} alt="Activity 1" />

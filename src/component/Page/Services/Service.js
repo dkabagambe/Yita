@@ -17,6 +17,14 @@ export default function Service() {
       icon: <ion-icon name="barcode-outline"></ion-icon>,
     },
     {
+      name: "Community Outreach",
+      icon: <ion-icon name="pulse-outline"></ion-icon>,
+    },
+    {
+      name: "Medical camp",
+      icon: <ion-icon name="pulse-outline"></ion-icon>,
+    },
+    {
       name: "Nursing and Bedside Medical Care",
       icon: <ion-icon name="color-fill-outline"></ion-icon>,
     },
@@ -28,9 +36,10 @@ export default function Service() {
       name: "Family Doctors’ Packages ",
       icon: <ion-icon name="color-fill-outline"></ion-icon>,
     },
+
     {
-      name: "Remote Patient Monitoring",
-      icon: <ion-icon name="color-fill-outline"></ion-icon>,
+      name: "Patient follow up and chronic Medicare",
+      icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
     {
       name: "Virtual Doctor and Midwife Consultations",
@@ -40,10 +49,12 @@ export default function Service() {
       name: "Referral & link to tertiary Care ",
       icon: <ion-icon name="storefront-outline"></ion-icon>,
     },
+
     {
-      name: "Patient follow up and chronic Medicare",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
+      name: "Remote Patient Monitoring",
+      icon: <ion-icon name="color-fill-outline"></ion-icon>,
     },
+
     {
       name: "Visiting Doctors ( Institution and Individual )",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
@@ -108,10 +119,7 @@ export default function Service() {
       name: "Dental Care services",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Community Outreach",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+
     {
       name: "Healthcare Campaign",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
@@ -120,10 +128,7 @@ export default function Service() {
       name: "Environmental Healthcare Consultancy",
       icon: <ion-icon name="pulse-outline"></ion-icon>,
     },
-    {
-      name: "Medical camp",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
+
     {
       name: "Mental Health",
       icon: <ion-icon name="pulse-outline"></ion-icon>,

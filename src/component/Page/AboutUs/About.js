@@ -24,22 +24,26 @@ export default function About() {
               <p>
                 Yita Medical Services (YMS) is a registered enterprise (Reg NO.
                 80020035497111) with an aim of providing equititable access to
-                affordable high quality healthcare services with special
-                attention to remote communities. YMS uses it’s profits to
-                support humanitarian work done under TEC-Uganda and other
-                humanitarian causes.
+                affordable high quality doctor led healthcare services with
+                special attention to remote communities. YMS uses part of it’s
+                profits to support humanitarian work done under TEC-Uganda and
+                other humanitarian causes.
                 <br /> <br /> Our story dates back in 2017 but active work and
                 services started in 2020 when COVID 19 struck the globe.Our
                 doctors and volunteers under TEC-Uganda mobilised relief items
                 for vulnerable communities and as well provided COVID 19
-                healthcare services remotely, a project we dubbed ‘’ Yita Musawo
+                healthcare services via telemedicine consultation and health
+                education of the Community, a project we dubbed ‘’ Yita Musawo
                 ‘’ where over one thousand (1000) people directly benefited.
                 <br /> <br />
                 We have since rebranded and diversified our scope of work to
                 include income generating services and products for the
                 sustainability of our humanitarian work, and maintenance and
                 facilitation of our employees, staff and as well extend our
-                services across Uganda and Africa.
+                services across Uganda and Africa. We pattern with a established
+                hospitals and medical centers to serve our wide range of home
+                based care patients accross central uganda with a goal to expand
+                to the rest of the country in the near future
               </p>
               <p></p>
             </div>
@@ -70,17 +74,17 @@ export default function About() {
                 <div className="col col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12">
                   <div>
                     <p data-aos="fade-left">
-                      To be the leading providers of outdoor and telemedicine
-                      healthcare services in Uganda and Africa.
+                      To be the leading providers of outdoor,home doctors and
+                      telemedicine healthcare services in Africa.
                     </p>
                   </div>
                 </div>
                 <div className="col col-lg-4 col-md-6 col-sm-12 col-xs-12 col-12">
                   <div>
                     <p data-aos="fade-left">
-                      To promote and advocate for the growth of home based care,
-                      telemedicine and outdoor medical services industry in
-                      Africa.
+                      To promote and advocate for the growth of home based
+                      healthcare, telemedicine and outdoor medical services
+                      industry in Africa.
                     </p>
                   </div>
                 </div>
@@ -89,7 +93,7 @@ export default function About() {
                     <p data-aos="fade-left">
                       To advocate for equitable access and affordability of
                       expert and specialised medical services to both urban and
-                      rural communities of Uganda/Africa
+                      rural communities of Africa
                     </p>
                   </div>
                 </div>
@@ -135,25 +139,23 @@ export default function About() {
                 style={index === 1 ? { display: "block" } : { display: "none" }}
               >
                 <ul>
+                  <li>our doctors and health workers move to the patients.</li>
                   <li>
                     Transition from non-critical unnecessary hospital visits to
                     access to expert doctor and all healthcare services from the
                     comfort of your home, institution and work environment.
                   </li>
                   <li>
-                    Our services save you from excessive financial costs
-                    resulting from unnecessary admissions, transport, and
-                    traffic jam and waiting time stress.
+                    Our services save you from avoidable financial costs
+                    resulting from unnecessary admissions, transport, traffic
+                    jam and waiting time stress among others.
                   </li>
                   <li>
                     Our Preventive healthcare promotion packages offer screening
                     services which enable early diagnosis of several diseases
-                    both communicable and non-communicable.
-                  </li>
-                  <li>
-                    Very affordable accessible services compared to the hospital
-                    based care services. You pay for only direct costs like
-                    doctor, nurses, laboratory, pharmacy services etc.{" "}
+                    both communicable and non-communicable among families
+                    ,schools,coperate companies, market places and rural
+                    communities
                   </li>
                 </ul>
               </div>
