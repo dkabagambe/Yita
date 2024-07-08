@@ -10,6 +10,14 @@ import kawempe2 from "../../../images/photo_5976566633449243973_y.jpg";
 import kawempe3 from "../../../images/photo_5976566633449243974_y.jpg";
 import kawempe4 from "../../../images/photo_5976566633449243979_y.jpg";
 import kawempe5 from "../../../images/photo_5976566633449243977_y.jpg";
+import naguru from "../../../images/photo_5976566633449243960_y.jpg";
+import naguru1 from "../../../images/photo_5976566633449243963_y.jpg";
+import naguru2 from "../../../images/photo_5976566633449243957_y.jpg";
+import naguru3 from "../../../images/photo_5976566633449243964_y.jpg";
+import talkshow3 from "../../../images/WhatsApp Image 2024-07-02 at 11.02.46 PM (2).jpeg";
+import talkshow from "../../../images/WhatsApp Image 2024-07-02 at 11.02.47 PM.jpeg";
+import talkshow1 from "../../../images/photo_5976566633449244005_y.jpg";
+import talkshow2 from "../../../images/WhatsApp Image 2024-07-02 at 11.06.17 PM (2).jpeg";
 
 function Activity() {
   return (
@@ -54,6 +62,45 @@ function Activity() {
             <img src={kawempe3} alt="Activity 2" />
             <img src={kawempe4} alt="Activity 2" />
             <img src={kawempe5} alt="Activity 2" />
+          </div>
+        </div>
+        <div className="activity-card">
+          <h2>Health Awareness Event at Naguru Go Down</h2>
+          <p>
+            our team organized a successful health awareness event at Naguru Go
+            Down, a vibrant community hub in the heart of the city. The event
+            aimed to educate and sensitize the public on the importance of
+            prioritizing health and wellness in their daily lives.
+          </p>
+          <div className="image-gallery">
+            <img src={naguru} alt="naguru" />
+            <img src={naguru1} alt="naguru2" />
+            <img src={naguru2} alt="naguru 3" />
+            <img src={naguru3} alt="naguru 4" />
+          </div>
+        </div>
+        <div className="activity-card">
+          <h2>Talk shows </h2>
+          <p>
+            Our team actively engages in health talk shows across multiple
+            platforms, including radio stations, television channels, online
+            platforms, and community events, sharing expert insights and advice
+            on various health topics, addressing audience questions and
+            concerns, and providing in-depth information and expert opinions. We
+            utilize social media, podcasts, and webinars to reach a wider
+            audience, organize and participate in health fairs, workshops, and
+            seminars, and engage with the public to provide personalized
+            guidance. By broadening our reach, we aim to educate people on
+            health and wellness, empower individuals to take control of their
+            health, inspire healthy lifestyle choices, and provide resources and
+            support for overall well-being, making a positive impact on the
+            health and lives of individuals in our community and beyond.
+          </p>
+          <div className="image-gallery">
+            <img src={talkshow} alt="talkshow" />
+            <img src={talkshow1} alt="talkshow2" />
+            <img src={talkshow2} alt="talkshow3" />
+            <img src={talkshow3} alt="talkshow 4" />
           </div>
         </div>
       </div>
