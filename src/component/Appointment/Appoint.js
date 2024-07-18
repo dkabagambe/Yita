@@ -31,8 +31,6 @@ export default function Appoint() {
     package: "",
     otherconcern: "",
     visittime: "",
-    visidate: "",
-    paymentmode: "",
     ref: "",
     feedback: "",
     udrug: "",
@@ -324,14 +322,26 @@ export default function Appoint() {
             <div className="row">
               <div className="col-md-6">
                 <input
-                  type="text"
-                  placeholder="Tribe"
-                  name="tribe"
+                  type="tel"
+                  placeholder="Phone"
+                  name="phone"
                   required
-                  value={appoints.tribe}
+                  value={appoints.phone}
                   onChange={handleFormChange}
                 />
               </div>
+              <div className="col-md-6">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                  value={appoints.email}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
               <div className="col-md-6">
                 <input
                   type="text"
@@ -339,6 +349,16 @@ export default function Appoint() {
                   name="occupation"
                   required
                   value={appoints.occupation}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Tribe"
+                  name="tribe"
+                  required
+                  value={appoints.tribe}
                   onChange={handleFormChange}
                 />
               </div>
@@ -374,28 +394,6 @@ export default function Appoint() {
             <div className="row">
               <div className="col-md-6">
                 <input
-                  type="tel"
-                  placeholder="Phone"
-                  name="phone"
-                  required
-                  value={appoints.phone}
-                  onChange={handleFormChange}
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  required
-                  value={appoints.email}
-                  onChange={handleFormChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <input
                   type="number"
                   placeholder="Weight"
                   name="weight"
@@ -419,7 +417,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="number"
-                  placeholder="Body mass index"
+                  placeholder="Body Mass Index"
                   name="mass"
                   required
                   value={appoints.mass}
@@ -455,7 +453,7 @@ export default function Appoint() {
               <div className="col-md-6">
                 <input
                   type="text"
-                  placeholder="what is your main complaint(s)today"
+                  placeholder="What is your main complaint(s) today"
                   name="otherconcern"
                   required
                   value={appoints.otherconcern}
@@ -464,40 +462,6 @@ export default function Appoint() {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6">
-                <input
-                  type="date"
-                  placeholder="Visit Time"
-                  name="visittime"
-                  required
-                  value={appoints.visittime}
-                  onChange={handleFormChange}
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="date"
-                  placeholder="Visit Date"
-                  name="visidate"
-                  required
-                  value={appoints.visidate}
-                  onChange={handleFormChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <select
-                  name="paymentmode"
-                  required
-                  value={appoints.paymentmode}
-                  onChange={handleFormChange}
-                >
-                  <option value="">Select Payment Mode</option>
-                  <option value="cash">Cash</option>
-                  <option value="card">Card</option>
-                </select>
-              </div>
               <div className="col-md-6">
                 <select
                   name="ref"
@@ -513,6 +477,60 @@ export default function Appoint() {
                   <option value="friend">Friend</option>
                   <option value="other">Other</option>
                 </select>
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="date"
+                  placeholder="Visit Date"
+                  name="visitdate"
+                  required
+                  value={appoints.visitdate}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Any Chronic Medication you're currently taking"
+                  name="anymedi"
+                  required
+                  value={appoints.anymedi}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Any known disease in Family History"
+                  name="unknownfamily"
+                  required
+                  value={appoints.unknownfamily}
+                  onChange={handleFormChange}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6">
+                <input
+                  type="text"
+                  placeholder="Any Chronic Disease/Allergy"
+                  name="unknownchronic"
+                  required
+                  value={appoints.unknownchronic}
+                  onChange={handleFormChange}
+                />
+              </div>
+              <div className="col-md-6">
+                <input
+                  type="number"
+                  placeholder="Quantity"
+                  name="qty"
+                  required
+                  value={appoints.qty}
+                  onChange={handleFormChange}
+                />
               </div>
             </div>
             <div className="row">
@@ -534,72 +552,6 @@ export default function Appoint() {
                   required
                   value={appoints.unknowndrug}
                   onChange={handleFormChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  placeholder="Any Chronic Medication your currently taking" //it should type it here
-                  name="anymedi"
-                  required
-                  value={appoints.anymedi}
-                  onChange={handleFormChange}
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  placeholder="Any Past Surgery"//this one should be removed and merged with any known chronic disease
-                  name="anypastsurvery"
-                  required
-                  value={appoints.anypastsurvery}
-                  onChange={handleFormChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  placeholder="Any known disease Family History"
-                  name="unknownfamily"
-                  required
-                  value={appoints.unknownfamily}
-                  onChange={handleFormChange}
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  placeholder="Any Chronic Disease/allergy" // this is should be when yes type
-                  name="unknownchronic"
-                  required
-                  value={appoints.unknownchronic}
-                  onChange={handleFormChange}
-                />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <input
-                  type="text"
-                  placeholder="Cost"
-                  name="cost"
-                  required
-                  value={appoints.cost}
-                  onChange={handleFormChange} // cost should be off
-                />
-              </div>
-              <div className="col-md-6">
-                <input
-                  type="number"
-                  placeholder="Quantity"
-                  name="qty"
-                  required
-                  value={appoints.qty}
-                  onChange={handleFormChange} //add a provisional where you write to the patient,just download after payment
                 />
               </div>
             </div>
