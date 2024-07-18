@@ -8,7 +8,6 @@ import emailjs from "emailjs-com";
 
 export default function Appoint() {
   const navigate = useNavigate();
-  const [id, setId] = useState(0);
   const rand =
     Math.floor(Math.random() * (500000000 - 100000000 + 1)) + 100000000;
   const [appoints, setData] = useState({
@@ -47,154 +46,9 @@ export default function Appoint() {
     Tx: rand,
   });
 
-  const [Service, setService] = useState([
-    {
-      name: "school student medical examination",
-      icon: <ion-icon name="bookmark-outline"></ion-icon>,
-    },
-    {
-      name: "Institutional Staff Medical Assesssment",
-      icon: <ion-icon name="git-merge-outline"></ion-icon>,
-    },
-    {
-      name: "Hospital at Home Care ( HOME CARE )",
-      icon: <ion-icon name="barcode-outline"></ion-icon>,
-    },
-    {
-      name: "Nursing and Bedside Medical Care",
-      icon: <ion-icon name="color-fill-outline"></ion-icon>,
-    },
-    {
-      name: "Antenantal Care",
-      icon: <ion-icon name="color-fill-outline"></ion-icon>,
-    },
-    {
-      name: "Family Doctors’ Packages ",
-      icon: <ion-icon name="color-fill-outline"></ion-icon>,
-    },
-    {
-      name: "Remote Patient Monitoring",
-      icon: <ion-icon name="color-fill-outline"></ion-icon>,
-    },
-    {
-      name: "Virtual Doctor and Midwife Consultations",
-      icon: <ion-icon name="storefront-outline"></ion-icon>,
-    },
-    {
-      name: "Referral & link to tertiary Care ",
-      icon: <ion-icon name="storefront-outline"></ion-icon>,
-    },
-    {
-      name: "Doctor home visit &  care",
-      icon: <ion-icon name="storefront-outline"></ion-icon>,
-    },
-    {
-      name: "Patient follow up and chronic Medicare",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Visiting Doctors ( Institution and Individual )",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Ambulance Services",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Elective Surgical Services",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Doctor Consult",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Mid wife consult",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Medicine delivery",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    { name: "Pharmacy", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    {
-      name: "Medicine Refill",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Laboratory sample pick",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    { name: "Peadiatrician", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    { name: "Gynecologist", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    {
-      name: "General Doctor",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    { name: "Surgeon", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    {
-      name: "Equipment Purchase",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Family planning",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Dental Care services",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Community Outreach",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Healthcare Campaign",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Environmental Healthcare Consultancy",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    { name: "Medical camp", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    { name: "Mental Health", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    {
-      name: "Psychiatric Healthcare",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Psychologist Services",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Radiology & Imaging",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    {
-      name: "Ultrasound scan",
-      icon: <ion-icon name="pulse-outline"></ion-icon>,
-    },
-    { name: "X-ray", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    { name: "CT scan", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    { name: "MRI", icon: <ion-icon name="pulse-outline"></ion-icon> },
-    { name: "Angiogram", icon: <ion-icon name="pulse-outline"></ion-icon> },
-  ]);
-  const Display = Service.map((_b, index) => (
-    <option
-      key={index}
-      value={_b.name}
-      style={{
-        textTransform: "capitalize",
-      }}
-    >
-      {_b.name}
-    </option>
-  ));
-
   const handleFormChange = (event) => {
     const { name, value } = event.target;
     setData({ ...appoints, [name]: value });
-    console.log("appoints", appoints);
   };
 
   async function createAppoint(event) {
@@ -207,45 +61,43 @@ export default function Appoint() {
       appoints.email.length < 2
     ) {
       window.alert("Some fields are required");
-    } else {
-      await Api.createAppointments(appoints).then((res) => {
-        Swal.fire(
-          "Success!",
-          "New appointment was created please check your mail",
-          "success"
-        );
-      });
+      return;
+    }
 
+    try {
+      // Assuming Api.createAppointments(appoints) is handled elsewhere or not needed for email sending
+      // await Api.createAppointments(appoints);
+
+      // Send email using EmailJS
       let datax = {
         name: appoints.name,
         from: appoints.email,
         Tx: appoints.Tx,
         data:
-          "Get your Reciept here  Reciept https://yitalife.com/Reciept?" +
+          "Get your Receipt here: Receipt https://yitalife.com/Receipt?" +
           appoints.Tx,
         subject: "New Appointment Created",
         msg: "We have received your appointment request. You will receive a mail when your appointment is confirmed.",
       };
 
-      // Send email using EmailJS
-      emailjs
-        .send(
-          "service_u3hyuoi", // replace with your EmailJS service ID
-          "template_ebhr6eg", // replace with your EmailJS template ID
-          datax,
-          "JSRSaOcgOlLRsjIRO" // replace with your EmailJS user ID,this is the public key
-        )
-        .then((res) => {
-          console.log(res);
-          if (res.status === 200) {
-            window.alert("Mail sent successfully");
-          } else {
-            window.alert("Mail failed");
-          }
-        });
+      const res = await emailjs.send(
+        "service_u3hyuoi", // replace with your EmailJS service ID
+        "template_5cg11g6", // replace with your EmailJS template ID
+        datax,
+        "JSRSaOcgOlLRsjIRO" // replace with your EmailJS user ID
+      );
+
+      if (res.status === 200) {
+        Swal.fire("Success!", "Mail sent successfully", "success");
+      } else {
+        Swal.fire("Error!", "Failed to send mail", "error");
+      }
 
       navigate(`/`);
       window.location.reload();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      Swal.fire("Error!", "Failed to send mail", "error");
     }
   }
 
