@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Header.css";
 import logo from "../../../images/logo.png";
 import logo2 from "../../../images/logo2.png";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const navToggleRef = useRef(null);
+
+  const handleLinkClick = () => {
+    if (navToggleRef.current) {
+      navToggleRef.current.checked = false;
+    }
+  };
+
   return (
     <div className="mmivc">
       <div className="smal">
@@ -34,7 +42,12 @@ export default function Header() {
       </div>
       <div className="navtabbg">
         <div className="navtab container">
-          <input type="checkbox" id="nav-toggle" style={{ display: "none" }} />
+          <input
+            type="checkbox"
+            id="nav-toggle"
+            ref={navToggleRef}
+            style={{ display: "none" }}
+          />
           <a href="/">
             <div className="logo" align="center">
               <img className="limg" alt="logo" src={logo} />
@@ -42,35 +55,55 @@ export default function Header() {
             </div>
           </a>
 
-          <ul class="links">
+          <ul className="links">
             <li>
-              <Link to="/" data-aos="fade-right">
+              <Link to="/" data-aos="fade-right" onClick={handleLinkClick}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/AboutUs" data-aos="fade-right">
+              <Link
+                to="/AboutUs"
+                data-aos="fade-right"
+                onClick={handleLinkClick}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/Services" data-aos="fade-right">
+              <Link
+                to="/Services"
+                data-aos="fade-right"
+                onClick={handleLinkClick}
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/Activity" data-aos="fade-right">
+              <Link
+                to="/Activity"
+                data-aos="fade-right"
+                onClick={handleLinkClick}
+              >
                 Activities
               </Link>
             </li>
             <li>
-              <Link to="/Gallery" data-aos="fade-right">
+              <Link
+                to="/Gallery"
+                data-aos="fade-right"
+                onClick={handleLinkClick}
+              >
                 Gallery
               </Link>
             </li>
 
             <li>
-              <Link to="/Contact" data-aos="fade-right">
+              <Link
+                to="/Contact"
+                data-aos="fade-right"
+                onClick={handleLinkClick}
+              >
                 Contact
               </Link>
             </li>
@@ -105,10 +138,10 @@ export default function Header() {
               </a>
             </li>
           </ul>
-          <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+          <label htmlFor="nav-toggle" className="icon-burger">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
           </label>
         </div>
         <div className="slogan" data-aos="fade-right">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Appoint.css";
 import logo from "../../images/logo.png";
-import Api from "../../Data/Api";
+// import Api from "../../Data/Api";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
@@ -50,7 +50,6 @@ export default function Appoint() {
     const { name, value } = event.target;
     setData({ ...appoints, [name]: value });
   };
-
   async function createAppoint(event) {
     event.preventDefault();
 
@@ -65,14 +64,36 @@ export default function Appoint() {
     }
 
     try {
-      // Assuming Api.createAppointments(appoints) is handled elsewhere or not needed for email sending
-      // await Api.createAppointments(appoints);
-
-      // Send email using EmailJS
       let datax = {
         name: appoints.name,
-        from: appoints.email,
-        Tx: appoints.Tx,
+        age: appoints.age,
+        gender: appoints.gender,
+        address: appoints.address,
+        tribe: appoints.tribe,
+        occupation: appoints.occupation,
+        religion: appoints.religion,
+        level: appoints.level,
+        phone: appoints.phone,
+        email: appoints.email,
+        weight: appoints.weight,
+        height: appoints.height,
+        mass: appoints.mass,
+        smoke: appoints.smoke,
+        alcohol: appoints.alcohol,
+        concern: appoints.concern, // Ensure concern is included
+        package: appoints.package, // Ensure package is included
+        otherconcern: appoints.otherconcern,
+        visittime: appoints.visittime,
+        visitdate: appoints.visitdate,
+        paymentmode: appoints.paymentmode, // Ensure paymentmode is included
+        ref: appoints.ref,
+        feedback: appoints.feedback,
+        udrug: appoints.udrug, // Ensure udrug is included
+        anymedi: appoints.anymedi,
+        unknowndrug: appoints.unknowndrug,
+        anypastsurvery: appoints.anypastsurvery, // Ensure anypastsurvery is included
+        unknownfamily: appoints.unknownfamily,
+        unknownchronic: appoints.unknownchronic,
         data:
           "Get your Receipt here: Receipt https://yitalife.com/Receipt?" +
           appoints.Tx,
@@ -80,11 +101,13 @@ export default function Appoint() {
         msg: "We have received your appointment request. You will receive a mail when your appointment is confirmed.",
       };
 
+      console.log(datax); // Log data to ensure all fields are present
+
       const res = await emailjs.send(
-        "service_u3hyuoi", // replace with your EmailJS service ID
-        "template_5cg11g6", // replace with your EmailJS template ID
+        "service_u3hyuoi",
+        "template_5cg11g6",
         datax,
-        "JSRSaOcgOlLRsjIRO" // replace with your EmailJS user ID
+        "JSRSaOcgOlLRsjIRO"
       );
 
       if (res.status === 200) {
