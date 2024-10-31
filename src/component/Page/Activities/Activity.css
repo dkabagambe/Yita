@@ -4,12 +4,12 @@
 .activity-page {
   width: 100%; /* Full width */
   max-width: 1200px; /* Maximum width for large screens */
-  margin: 40px auto; /* Center the page horizontally */
+  margin: 10px auto; /* Center the page horizontally */
   padding: 20px; /* Internal padding */
   height: auto; /* Automatic height based on content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   z-index: 1; /* Ensure it is above other elements with negative z-index */
-  padding-top: 30vh;
+  padding-top: 5vh;
   font-family: garamond;
   overflow: hidden;
   background: linear-gradient(135deg, #e5e5f7 0%, #e6f4f7 50%, #d7e0ef 100%);
@@ -79,7 +79,7 @@
     max-width: auto;
     margin: 20px auto;
     height: auto; /* Automatic height based on content */
-    padding-top: 22vh;
+    padding-top: 15vh;
   }
   .activity-page h1 {
     font-size: 2rem;

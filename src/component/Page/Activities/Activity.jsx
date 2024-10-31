@@ -18,10 +18,42 @@ import talkshow3 from "../../../images/WhatsApp Image 2024-07-02 at 11.02.46 PM 
 import talkshow from "../../../images/WhatsApp Image 2024-07-02 at 11.02.47 PM.jpeg";
 import talkshow1 from "../../../images/photo_5976566633449244005_y.jpg";
 import talkshow2 from "../../../images/WhatsApp Image 2024-07-02 at 11.06.17 PM (2).jpeg";
+import upcoming from "../../../images/upc.jpeg";
+// import yita from "../../../images/yita.jpeg";
 
 function Activity() {
   return (
     <div className="activity-page">
+      <div className="activity-card">
+        <h2>Upcoming Health Camp in Buganda</h2>
+        <p>
+          Join us for a FREE Health Camp organized by the Buganda Kingdom, with
+          the theme: "Health is the Foundation of Prosperity."
+        </p>
+        <p>
+          **Date:** November 13, 2024 **Location:** Bulange, Mengo **Time:**
+          From 8:00 AM (all day)
+        </p>
+        <p>
+          A range of health services will be offered, including:
+          <ul>
+            <li>Blood sugar screening and diabetes care.</li>
+            <li>Health services for kidney and eye diseases.</li>
+            <li>Nutritional counseling for managing diabetes.</li>
+            <li>Dental check-ups and care.</li>
+            <li>Prostate health screening.</li>
+            <li>Health services for the elderly (ages 17-65 and above).</li>
+          </ul>
+        </p>
+        <p>
+          This event is open to all, with no registration fee required. Don't
+          miss this opportunity to improve your health and well-being.
+        </p>
+        <p>**For more information, contact:** 0704924200</p>
+        <div className="image-gallery">
+          <img src={upcoming} alt="Health Camp" />
+        </div>
+      </div>
       <h1>Recent Activities</h1>
       <div className="activity-container">
         <div className="activity-card">

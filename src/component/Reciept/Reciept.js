@@ -151,6 +151,7 @@ export default function Reciept() {
       <div className="rec">
         <div className="logoappointment" align="center">
           <Link to="/Appointment">
+            <th>Remark</th>
             <img src={Logo} alt="logo" />
             YITA MEDICAL SERVICES
           </Link>
@@ -198,7 +199,7 @@ export default function Reciept() {
             <br></br>
             Kindly follow us;
             <br />
-            twitter: @yitamusawo <br /> facebook: yita life. <br /> whatsapp:
+            X(twitter: @yitamusawo) <br /> facebook: yita life. <br /> whatsapp:
             +256777114327
           </p>
         </div>

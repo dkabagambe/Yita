@@ -32,23 +32,23 @@ class Api {
   }
   LoginUser(e, b) {
     return axios.get(`${USER_API_URL}/user.php`, {
-      params: { Username: e, Password: b },
+      params: { Username: e, Password: b }, //this one gets the username and password
     });
   }
   GetSingle(e) {
     return axios.get(`${USER_API_URL}/single.php`, {
       params: { Email: e },
-    });
+    }); // here you just get the email of the user
   }
 
   deleteRecord(Invoice) {
     return axios.delete(`${USER_API_URL}/delete.php`, {
-      params: { Invoice: Invoice },
+      params: { Invoice: Invoice }, // you can delete the invoice at this point
     });
   }
   DelImg(Id) {
     return axios.delete(`${USER_API_URL}/detateimage.php`, {
-      params: { Id: Id },
+      params: { Id: Id }, // you can as well delete the image at this point
     });
   }
   updateBank(data) {

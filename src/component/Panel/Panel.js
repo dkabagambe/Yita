@@ -25,12 +25,12 @@ export default function Panel() {
     await Api.GetSingle(email).then((res) => {
       // console.log("User here", res.data);
       // alert("Success");
-      if (res.data == "success") {
+      if (res.data === "success") {
         const update = async () => {
           await Api.UpPass(user).then((res) => {
             // console.log("Passowrd ", res.data);
             // alert("Success");
-            if (res.data == "Success") {
+            if (res.data === "Success") {
               // localStorage.setItem("logged", true);
               alert("Success, Password Changed ! Please Log In");
               setIndexpage(1);
@@ -52,7 +52,7 @@ export default function Panel() {
 
           await Api.sendmailp(datax).then((res) => {
             console.log(res.data);
-            if (res.data == "success") {
+            if (res.data === "success") {
               // window.alert("Mail sent Successfully");
               window.location.reload();
             } else {
@@ -74,7 +74,7 @@ export default function Panel() {
       Password: password,
     };
     await Api.LoginUser(username, password).then((res) => {
-      if (username == res.data.Username && password == res.data.Password) {
+      if (username === res.data.Username && password === res.data.Password) {
         localStorage.setItem("logged", true);
         alert("Success");
         window.location.reload();
@@ -93,7 +93,7 @@ export default function Panel() {
           <hr />
           <h6>Panel</h6>
           <br />
-          <div style={index == 1 ? { display: "none" } : { display: "block" }}>
+          <div style={index === 1 ? { display: "none" } : { display: "block" }}>
             <div>
               <label>Username</label>
               <br />
@@ -112,7 +112,7 @@ export default function Panel() {
               </div>
             </div>
           </div>
-          <div style={index == 0 ? { display: "none" } : { display: "block" }}>
+          <div style={index === 0 ? { display: "none" } : { display: "block" }}>
             <br />
 
             <h5>Reset Password</h5>
@@ -141,19 +141,19 @@ export default function Panel() {
               className="btn btn-success"
               onClick={
                 () => {
-                  index != 1 ? logIn() : setIndex(0);
+                  index !== 1 ? logIn() : setIndex(0);
                   // clearData();
                 }
                 //
               }
-              style={index == 1 ? { display: "none" } : { display: "block" }}
+              style={index === 1 ? { display: "none" } : { display: "block" }}
             >
               Login
             </button>
             <button
               className="btn btn-success"
               onClick={() => {
-                index == 1 ? forgot() : setIndex(1);
+                index === 1 ? forgot() : setIndex(1);
                 clearData();
               }}
               style={{ display: "block", background: "brown" }}
@@ -164,16 +164,15 @@ export default function Panel() {
               className="btn btn-success"
               onClick={
                 () => {
-                  index != 1 ? logIn() : setIndex(0);
+                  index !== 1 ? logIn() : setIndex(0);
                   clearData();
                 }
                 //
               }
-              style={index == 0 ? { display: "none" } : { display: "block" }}
+              style={index === 0 ? { display: "none" } : { display: "block" }}
             >
               Back to Login
             </button>
-          
           </div>
         </div>
       </div>
